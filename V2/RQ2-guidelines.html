@@ -1,0 +1,1912 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<style type="text/css">
+		p{
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+
+	<!-- scripts -->
+
+	<style type="text/css">
+		#myInput {
+			background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+			background-position: 10px 12px; /* Position the search icon */
+			background-repeat: no-repeat; /* Do not repeat the icon image */
+			width: 100%; /* Full-width */
+			font-size: 16px; /* Increase font-size */
+			padding: 12px 20px 12px 40px; /* Add some padding */
+			border: 1px solid #ddd; /* Add a grey border */
+			margin-bottom: 12px; /* Add some space below the input */
+		}
+
+		#myTable {
+			border-collapse: collapse; /* Collapse borders */
+			width: 100%; /* Full-width */
+			border: 1px solid #ddd; /* Add a grey border */
+			font-size: 18px; /* Increase font-size */
+		}
+
+		#myTable th, #myTable td {
+			text-align: left; /* Left-align text */
+			padding: 12px; /* Add padding */
+		}
+
+		#myTable tr {
+			/* Add a bottom border to all table rows */
+			border-bottom: 1px solid #ddd;
+		}
+
+		#myTable tr.header, #myTable tr:hover {
+			/* Add a grey background color to the table header and on hover */
+			background-color: #f1f1f1;
+		}</style>
+
+		<script>
+			function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("guidelines");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+  	td = tr[i].getElementsByTagName("td")[3];
+  	if (td) {
+  		txtValue = td.textContent || td.innerText;
+  		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+  			tr[i].style.display = "";
+  		} else {
+  			tr[i].style.display = "none";
+  		}
+  	}
+  }
+}
+</script>
+<!-- end scripts -->
+
+<title>A Tertiary Study on Characteristics</title>
+</head>
+<body>
+	<div class="container">
+		<p>A Tertiary Study on Characteristics</p>
+		<p>Table 4 - Guidelines to construct a sustainable software</p>
+		<div class="jumbotron">
+			<label for="classifications">Filter by classification</label>
+
+			<select name="classifications" id="myInput" onchange="myFunction()" >
+				<option value="Choose">Choose a classification</option>
+				<option value="Communication">Communication</option>
+				<option value="Energy saving techniques">Energy Saving Techniques</option>
+				<option value="Knowledge Management">Knowledge Management</option>
+				<option value="Measures/Metrics">Measures/Metrics</option>
+				<option value="Reuse/Refactor">Reuse/Refactor</option>
+				<option value="Security">Security</option>
+				<option value="Sustainability Planning">Sustainability Planning</option>
+				<option value="Efficient Coding">Efficient Coding</option>
+				<option value="Sustainable Design">Sustainable Design</option>
+				<option value="Sustainable Economy">Sustainable Economy</option>
+				<option value="Hardware">Hardware</option>
+				<option value="Characteristic">Characteristic</option>
+				<option value="Team Experience">Team Experience</option>
+				<option value="Team Organization">Team Organization</option>
+				<option value="Team Training">Team training</option>
+				<option value="Technical Excellence">Technical Excellence</option>
+				<option value="Tools">Tools</option>
+				<option value="E-waste">E-waste</option>
+				<option value="Work Environment">Work Environment</option>
+			</select>
+		</div>
+
+		<table id="guidelines" class="table table-bordered table-hover table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Study</th>
+					<th scope="col">Guideline</th>
+					<th scope="col">Classification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>[1]</td>
+					<td>Schedule daily stand‐up meeting to encourage the communication of team members.</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>[1]</td>
+					<td>Arrange face to face meetings and use web technologies such as online chats, webinars, email, and discussion forums for strong interactions between customer and developers.</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>[1]</td>
+					<td>Arrange social activities for providing opportunities to the team members for informal communication.</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>[1][22]</td>
+					<td>Plan interaction sessions among developers and customers to understand the complexity of software project.</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>[1]</td>
+					<td>Encourage informal communication across the team members.</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>[1]</td>
+					<td>Feedback from customers during retrospective meeting should be recorded to improve the overall quality of software.</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>[1]</td>
+					<td>Perform regular team sessions for effective software development plans (schedule, iteration, quality, and sustainability).</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>[1]</td>
+					<td>Arrange a milestone retrospective meeting to ensure the green and sustainable behavior of a software project</td>
+					<td>Communication</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>[2]</td>
+					<td>Use of virtualized hardware/clouds could be anarchitectural step that would lead to shared reusable layer of hardware that can be commissioned and decommissioned  in a matter ofhours and would lead to lesser power utilization and reduce ‘hardware  garbage’. Also the use  of ‘hosted  service’ within an organisation would ensure that a large number of users can use agiven software with considerably lesser  energy utilization requirements. </td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>[8]</td>
+					<td>Create mechanisms to reduce CPU energy consumption</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>[8]</td>
+					<td>Avoid the use of frameworks when developing small applications to improve energy efficiency.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>[8]</td>
+					<td>Choose an energy efficient Design Patterns</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>[8]</td>
+					<td>Choose an energy efficient storage technology.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>[8]</td>
+					<td>Choose less energy consuming design patterns.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>[8]</td>
+					<td>Implement an architecture to automatically organize VM to use less energy not impacting the QoS.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>[8]</td>
+					<td>Use of HVMM management to reduce energy consumption of an application on virtual or physical architecture</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td>[8]</td>
+					<td>Use of memoization techniques, optimized use of garbage collection and optimized use of memory increase energy efficiency.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>18</td>
+					<td>[8]</td>
+					<td>Use of Memoization, pure functions and memory allocation can lead to reduce time execution and energy consumption.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>19</td>
+					<td>[8]</td>
+					<td>Use of neural networks to identify patterns of energy usage and automatically reconfigure the VM.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>[8]</td>
+					<td>Identify energy efficient applications based on ERPs, Image editors and games are less energy efficient than FTP clients and servers and calendar.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>[8]</td>
+					<td>Use of a browser that consumes less energy when processing web pages.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>22</td>
+					<td>[8]</td>
+					<td>Use of energy test case scenarios for web page energy consumption.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>23</td>
+					<td>[2][8]</td>
+					<td>Identify and reduce energy cost on facilities.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>[8]</td>
+					<td>Implement multithreaded applications to use less time and turn the application energy efficient.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>25</td>
+					<td>[8]</td>
+					<td>Use of pure SQL code in class rather than Frameworks like Hibernate improve energy efficiency.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>26</td>
+					<td>[8]</td>
+					<td>Improve energy efficiency by repartitioning databases across fewer disks.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>27</td>
+					<td>[8]</td>
+					<td>Employ energy efficiency techniques as Compiler optimization Sets</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>28</td>
+					<td>[8]</td>
+					<td>Employ energy efficiency techniques as Interpreted versus Compiled</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>29</td>
+					<td>[8]</td>
+					<td>Employ energy efficiency techniques as Overclocking (Turbo boost)</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>30</td>
+					<td>[8]</td>
+					<td>Employ energy efficiency techniques as Parallelism</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>31</td>
+					<td>[8]</td>
+					<td>Employ energy efficiency techniques as Processor Frequency Tuning</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>32</td>
+					<td>[8]</td>
+					<td>Employ energy efficiency techniques as Processor Sleep States</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>33</td>
+					<td>[8]</td>
+					<td>Employ energy efficiency techniques as Source Code Tuning</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>34</td>
+					<td>[8]</td>
+					<td>Use of Dynamic Voltage and Frequency Scaling (DVFS) power management technique.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>35</td>
+					<td>[8]</td>
+					<td>Use of quality attributes as Energy Efficiency considering the resource usage like, CPU, Memory and system performance.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>36</td>
+					<td>[8]</td>
+					<td>Use of quality attributes as Energy Efficiency regarding time to response, amount of resources and software performance.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>37</td>
+					<td>[8]</td>
+					<td>Use of quality attributes as Functionalities regarding accuracy, suitability, security and interoperability.</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>38</td>
+					<td>[19]</td>
+					<td>A better architecture in terms of maintainability can certainly be worse in terms of power consumption</td>
+					<td>Energy saving techniques</td>
+				</tr>
+				<tr>
+					<td>39</td>
+					<td>[1]</td>
+					<td>Use information radiators to share the information about software development among developers and customers.</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>40</td>
+					<td>[2]</td>
+					<td>Effective knowledge management</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>41</td>
+					<td>[7]</td>
+					<td>Identify a sustainability expert within software project</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>42</td>
+					<td>[7]</td>
+					<td>Consult relevant experts in any of the sustainability dimensions</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>43</td>
+					<td>[8]</td>
+					<td>Support from senior managers.</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>44</td>
+					<td>[21]</td>
+					<td>Knowledge bases should be created to capture and reuse the experiences from former sustainability evaluations. </td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>45</td>
+					<td>[22]</td>
+					<td>Provide knowledge sharing strategies</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>46</td>
+					<td>[22]</td>
+					<td>Create knowledge base</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>47</td>
+					<td>[22]</td>
+					<td>Acquire knowledge by hiring skillful and knowledgeable software engineers</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>48</td>
+					<td>[22]</td>
+					<td>Increase organizational learning</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>49</td>
+					<td>[22]</td>
+					<td>Avoid knowledge loss by effective knowledge sharing</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>50</td>
+					<td>[22]</td>
+					<td>Develop a framework for individual or group discussions in collective learning and problem solving</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>51</td>
+					<td>[22]</td>
+					<td>Provide effective knowledge sharing platforms, for example, social media</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>52</td>
+					<td>[22]</td>
+					<td>Provide tutorial  and teaching courses to software engineers</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>53</td>
+					<td>[22]</td>
+					<td>Introduce sustainable software engineering education and knowledge in Software engineering Curricula</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>54</td>
+					<td>[22]</td>
+					<td>Provide tutorial and teaching courses to software engineers</td>
+					<td>Knowledge Management</td>
+				</tr>
+				<tr>
+					<td>55</td>
+					<td>[1]</td>
+					<td>Track the velocity of development to deliver software in time.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>56</td>
+					<td>[1]</td>
+					<td>Use energy estimation software such as “Green Tracker” to measure the energy consumption estimates of software.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>57</td>
+					<td>[2]</td>
+					<td>Define quantitative metrics that can be used as acceptance criteria for environmental feasibility of the project and to have a clear objective definition ofenvironmental metrics as related to the technology inquestion needs to be defined, agreed, validated and usedas a standard practice.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>58</td>
+					<td>[8]</td>
+					<td>Collect the energy consumption data.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>59</td>
+					<td>[8]</td>
+					<td>Estimate energy consumption via data transferred over the network.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>60</td>
+					<td>[8]</td>
+					<td>Identify consumption peak from the source code.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>61</td>
+					<td>[8]</td>
+					<td>Identify consumption peak when launching an application.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>62</td>
+					<td>[8]</td>
+					<td>Implement energy monitoring of the source code.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>63</td>
+					<td>[8]</td>
+					<td>Enable software developers to continuously measure and monitor energy consumption of software under development.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>64</td>
+					<td>[8]</td>
+					<td>Create an environment for software energy measurements during the development.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>65</td>
+					<td>[8]</td>
+					<td>Use of controlling methods to measure browser energy consumption</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>66</td>
+					<td>[8]</td>
+					<td>Estimate third-party server’s energy consumption (CDNs) when the data from datacenter is not available.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>67</td>
+					<td>[8]</td>
+					<td>Monitor user devices when using the system.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>68</td>
+					<td>[8]</td>
+					<td>Choose of consumption measurement analysis.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>69</td>
+					<td>[8]</td>
+					<td>Use of a hardware to measure many types of energy measures</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>70</td>
+					<td>[8]</td>
+					<td>Use of modularization metrics to achieve sustainability quality system.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>71</td>
+					<td>[8]</td>
+					<td>Use of regulators and special agency data to be the base of energy consumption estimation.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>72</td>
+					<td>[8]</td>
+					<td>Collect power utilization effectiveness (PEU) from cooling and power.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>73</td>
+					<td>[8]</td>
+					<td>Use of Power Measurements during application execution.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>74</td>
+					<td>[8]</td>
+					<td>Use of software power metrics like disk hits transaction per second.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>75</td>
+					<td>[8]</td>
+					<td>Use of software power metrics like KB active (memory that was recently active)</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>76</td>
+					<td>[8]</td>
+					<td>Use of software power metrics like User-time per second (user space CPU usage).</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>77</td>
+					<td>[8]</td>
+					<td>Analyze the impact of the web page size on power consumption.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>78</td>
+					<td>[8]</td>
+					<td>Use of integration and acceptance testing framework to measure the energy consumption of web server</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>79</td>
+					<td>[8]</td>
+					<td>Measure energy efficiency by collecting data transferred and user actions on the system.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>80</td>
+					<td>[8]</td>
+					<td>Report the results of sustainability assessment</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>81</td>
+					<td>[8]</td>
+					<td>Monitor company and product performance on Requirements sustainability</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>82</td>
+					<td>[8]</td>
+					<td>Estimate efficiency by using the add value to the customer versus project- related effort to measure Project Efficiency.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>83</td>
+					<td>[8]</td>
+					<td>Estimate the project footprint by considering the amount of hours working in house or in office.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>84</td>
+					<td>[8]</td>
+					<td>Define sustainability indicators.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>85</td>
+					<td>[8]</td>
+					<td>Use of metrics for sustainability improvement goals to achieve better results in sustainability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>86</td>
+					<td>[8]</td>
+					<td>Use of Defect Density to measure Dependability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>87</td>
+					<td>[8]</td>
+					<td>Use of Distance measurement for Modifiability and Reusability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>88</td>
+					<td>[8]</td>
+					<td>Use of Effectiveness to measure usability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>89</td>
+					<td>[8]</td>
+					<td>Use of error rate to measure usability</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>90</td>
+					<td>[8]</td>
+					<td>Use of Estimated System Lifetime to measure Portability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>91</td>
+					<td>[8]</td>
+					<td>Use of Estimation Quality Rate to measure the predictability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>92</td>
+					<td>[8]</td>
+					<td>Use of Learnability to measure usability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>93</td>
+					<td>[8]</td>
+					<td>Use of Relative Response Time to measure Performance</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>94</td>
+					<td>[8]</td>
+					<td>Use of Support Rate to measure Supportability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>95</td>
+					<td>[8]</td>
+					<td>Use of Sustainability Performance Metrics to improve sustainability aspects.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>96</td>
+					<td>[2][8]</td>
+					<td>Evaluate product's sustainability.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>97</td>
+					<td>[8]</td>
+					<td>Monitor software impact in the environment</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>98</td>
+					<td>[8]</td>
+					<td>Use of metrics to assess Accessibility regarding social aspects of the system.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>99</td>
+					<td>[8]</td>
+					<td>Mitigate the idle consumption using Relative Idle Consumption metric</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>100</td>
+					<td>[8]</td>
+					<td>Determine the energy consumption of the application by calculating the hardware consumption when a component has been executed.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>101</td>
+					<td>[8]</td>
+					<td>Identify power consumption during peak workload.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>102</td>
+					<td>[8]</td>
+					<td>Quantify the energy consumption scale with an increasing.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>103</td>
+					<td>[8]</td>
+					<td>Use of quality attributes as Reliability to measure failure-free operation of the system</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>104</td>
+					<td>[8]</td>
+					<td>Identify high energy consuming user interface functionalities.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>105</td>
+					<td>[8]</td>
+					<td>Identify the user device by web analytics.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>106</td>
+					<td>[8]</td>
+					<td>Identify user's behaviors when using the software</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>107</td>
+					<td>[8]</td>
+					<td>Use of web analytics to get energy consumption information.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>108</td>
+					<td>[8]</td>
+					<td>Identify high energy consuming user interface functionalities.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>109</td>
+					<td>[8]</td>
+					<td>Estimate the energy impact from delivery of service until the end user.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>110</td>
+					<td>[8]</td>
+					<td>Calculate energy footprint end-to-end when developing a system.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>111</td>
+					<td>[19]</td>
+					<td>Use code smell detection to identify patterns known or suspected to be detrimental to software quality (especially maintainability). </td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>112</td>
+					<td>[19]</td>
+					<td>There is measures related to energy efficiency (30 of the 81 measures for product), an important subset of measures are related to resource optimization (23%) and perdurability (28%) </td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>113</td>
+					<td>[19]</td>
+					<td>Define the Greenup, Powerup and Speedup metrics to explain the correlations of energy, power and performance when optimizing software.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>114</td>
+					<td>[21]</td>
+					<td>Also architecture-level metrics could be accompanied with a catalogue or guidelines for architecture-level refactorings aiming at improving specific metric values.</td>
+					<td>Measures/Metrics</td>
+				</tr>
+				<tr>
+					<td>115</td>
+					<td>[1][2]</td>
+					<td>Develop reusable prototype instead of throw‐away prototype.</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>116</td>
+					<td>[1][2][19]</td>
+					<td>Refactor the software system whenever required</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>117</td>
+					<td>[1][2][8]</td>
+					<td>Design low dependent modules to avoid design complexity.</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>118</td>
+					<td>[1]</td>
+					<td>Adopt component‐based development strategy for reuse of the existing components in the development of a new system to minimize time, cost, and efforts.</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>119</td>
+					<td>[2]</td>
+					<td>Go back and solve it again</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>120</td>
+					<td>[2]</td>
+					<td>re-use test cases</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>121</td>
+					<td>[2]</td>
+					<td>archive nad re-use components</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>122</td>
+					<td>[2]</td>
+					<td>re-use hardware</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>123</td>
+					<td>[2]</td>
+					<td>To define ‘green’ test cases with sample values, benchmark tests and feeding back the results of the tests to further improve the metrics over several iterations </td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>124</td>
+					<td>[8]</td>
+					<td>Reduce the number of loops and database accesses by refactoring.</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>125</td>
+					<td>[19]</td>
+					<td>Software design patterns and refactoring techniques need to be studied in depth, to discover the way they affect energy consumption</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>126</td>
+					<td>[19]</td>
+					<td>Highly reusable assets are prone to be optimized, as is their greenability</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>127</td>
+					<td>[19]</td>
+					<td>If an asset is easy to modify, it is likely to keep (and not worsen) its greenability</td>
+					<td>Reuse / Refactor</td>
+				</tr>
+				<tr>
+					<td>128</td>
+					<td>[1]</td>
+					<td>Appoint security engineer to estimate, monitor, and mitigate security risks and perform real‐time security reviews of system's design and code</td>
+					<td>Security</td>
+				</tr>
+				<tr>
+					<td>129</td>
+					<td>[19]</td>
+					<td>Security has a potential negative interaction with sustainability</td>
+					<td>Security</td>
+				</tr>
+				<tr>
+					<td>130</td>
+					<td>[2]</td>
+					<td>Consider software shelf-life</td>
+					<td>Sustainability planning</td>
+				</tr>
+				<tr>
+					<td>131</td>
+					<td>[7]</td>
+					<td>Aggregate a sustainability role in a stakeholder list</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>132</td>
+					<td>[7]</td>
+					<td>Identify sustainability guidelines in the application domain</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>133</td>
+					<td>[7][16]</td>
+					<td>Use a sustainable goals catalog to derive sustainability requirements</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>134</td>
+					<td>[7]</td>
+					<td>Define sustainability goals by means of a model (e.g. GQM, framework, meta-model, requirements patterns)</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>135</td>
+					<td>[7]</td>
+					<td>Create a glossary of terms</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>136</td>
+					<td>[8]</td>
+					<td>Define design choices may impact on energy consumption when made to support high performance production.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>137</td>
+					<td>[8]</td>
+					<td>Identify carbon footprint based on countries emissions.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>138</td>
+					<td>[8]</td>
+					<td>Plan usage scenarios</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>139</td>
+					<td>[8]</td>
+					<td>Refine and deduce sustainability requirements</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>140</td>
+					<td>[8]</td>
+					<td>Identify green deployment requirements for the system under development</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>141</td>
+					<td>[8]</td>
+					<td>Analyze the dimensions to find responsible roles and matching them top-down to the context.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>142</td>
+					<td>[8]</td>
+					<td>Identify improvements on business process by using different approaches of sustainability.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>143</td>
+					<td>[8]</td>
+					<td>Identify initiatives of sustainability in the company level.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>144</td>
+					<td>[8]</td>
+					<td>Identify sustainability means for the company or product.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>145</td>
+					<td>[8]</td>
+					<td>Include Green IT in strategic management of enterprises.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>146</td>
+					<td>[8]</td>
+					<td>Specify a concrete and measurable sustainability actions.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>147</td>
+					<td>[8]</td>
+					<td>Use of reference model to gather the sustainability activities, dimensions, values, indicators and regulation.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>148</td>
+					<td>[8]</td>
+					<td>Inspect the context, understanding which concrete roles are involved, and match them bottom-up to the dimensions.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>149</td>
+					<td>[8]</td>
+					<td>Develop a software in economic sustainable way</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>150</td>
+					<td>[8]</td>
+					<td>Identify practices of Process- Related Properties like predictability, efficiency and project's footprint.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>151</td>
+					<td>[8]</td>
+					<td>Identify sustainable actives that impact positively the indicators.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>152</td>
+					<td>[8]</td>
+					<td>Analyze and refine a generic sustainability model</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>153</td>
+					<td>[8]</td>
+					<td>Analyze sustainability of business or domain context</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>154</td>
+					<td>[8]</td>
+					<td>Derive non-obsolescence requirements and quality characteristics of maintainability, supportability and reliability</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>155</td>
+					<td>[8]</td>
+					<td>Identify quality requirements to measure sustainability dimensions.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>156</td>
+					<td>[8]</td>
+					<td>Identify sustainability stakeholders who issues objectives, constraints and consideration about the system under development.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>157</td>
+					<td>[8]</td>
+					<td>Specify sustainable interaction</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>158</td>
+					<td>[8]</td>
+					<td>Elicit sustainability constraints</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>159</td>
+					<td>[8]</td>
+					<td>Elicit sustainability objectives</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>160</td>
+					<td>[8]</td>
+					<td>Instantiate generic lists of sustainability stakeholders</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>161</td>
+					<td>[8]</td>
+					<td>Use of a model to identify sustainability stakeholders.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>162</td>
+					<td>[8]</td>
+					<td>Identify practices related to Usage-related properties like performance, dependability, usability and accessibility.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>163</td>
+					<td>[8]</td>
+					<td>Identify software sustainability.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>164</td>
+					<td>[8]</td>
+					<td>Consider business process when Construction a Green System.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>165</td>
+					<td>[8]</td>
+					<td>Evaluate company's sustainability impacts using a model.</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>166</td>
+					<td>[8]</td>
+					<td>Adopt a Life Cycle Assessment principles</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>167</td>
+					<td>16</td>
+					<td>Many sustainability problems can already be mitigated by good software engineering practice</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>168</td>
+					<td>[21]</td>
+					<td>Use approaches (e.g., based on simulation or other techniques) must be more explored instead of only using scenarios (most used method to evaluate architecture sustainability).</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>169</td>
+					<td>[22]</td>
+					<td>Provide the sustainable software engineering methodologies at the tactical and strategic level</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>170</td>
+					<td>[22]</td>
+					<td>Make software engineers familiar with the unknown and varying situations</td>
+					<td>Sustainability Planning</td>
+				</tr>
+				<tr>
+					<td>171</td>
+					<td>[8]</td>
+					<td>Cache the pages can reduce the energy consumption of webpage.</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>172</td>
+					<td>[19]</td>
+					<td>Improve the codes number of operations and the optimum usage of main memory and cache there is more room for energy savings." </td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>173</td>
+					<td>[1][2]</td>
+					<td>Always code the software in pairs (pair programming).</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>174</td>
+					<td>[8]</td>
+					<td>Use of Software Sustainability Guidelines during software development.</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>175</td>
+					<td>[8]</td>
+					<td>Use of a GNU Complier optimizations program reduce energy consumption of the code.</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>176</td>
+					<td>[8]</td>
+					<td>Use of Java using the default options is energy efficient.</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>177</td>
+					<td>[8]</td>
+					<td>Use of modular architecture build for agile software programming (POWERAPI).</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>178</td>
+					<td>[8]</td>
+					<td>Test the energy efficiency performance of different programming languages.</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>179</td>
+					<td>[19]</td>
+					<td>Recommended practices to enhance performance can also optimize energy efficiency</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>180</td>
+					<td>[19]</td>
+					<td>Define energy wasting code patterns to improve software quality maintainability towards energy efficiency</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>181</td>
+					<td>[19]</td>
+					<td>For both C and C++ code [of FFT], using optimization flags not only improves performance, but also reduces energy consumption.</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>182</td>
+					<td>[19]</td>
+					<td>Use efficient data structures fast Fourier Transform, Linked List Insertion/Deletion and Quicksort.</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>183</td>
+					<td>[19]</td>
+					<td>The functions must be implemented considering their, Functional complexity, type of functionality offered by a category of software product affects Energy comsumption</td>
+					<td>Efficient coding</td>
+				</tr>
+				<tr>
+					<td>184</td>
+					<td>[1][2]</td>
+					<td>Design simple and user friendly software according to customer's needs.</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>185</td>
+					<td>[1]</td>
+					<td>Update the design as per the changes in customer's requirements.</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>186</td>
+					<td>[1][8]</td>
+					<td>Manage to redesign software system according to the volatile customer's requirements.</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>187</td>
+					<td>[2]</td>
+					<td>avoid frequent changes</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>188</td>
+					<td>[2][8]</td>
+					<td>Create a standard set of ‘Environment  Requirements’ and list to be added to the non functional requirement criteria in agreement with the client and tune the requirements based on the project being undertaken.</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>189</td>
+					<td>[3]</td>
+					<td>Use Requirements engineering to support the identification of sustainability goals</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>190</td>
+					<td>[8]</td>
+					<td>Apply guidance to help on energy impact software design decisions</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>191</td>
+					<td>[8][19]</td>
+					<td>Enhancing software process quality has a potentially positive interaction with energy efficiency</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>192</td>
+					<td>[13][16]</td>
+					<td>Use requirements engineering for sustainable software development in the whole software life cycle</td>
+					<td>Sustainable design</td>
+				</tr>
+				<tr>
+					<td>193</td>
+					<td>[2]</td>
+					<td>Include environmental costs in your costs analysis</td>
+					<td>Sustainable economy</td>
+				</tr>
+				<tr>
+					<td>194</td>
+					<td>[8]</td>
+					<td>Identify the cost of non-energy efficient application per unit of work.</td>
+					<td>Sustainable economy</td>
+				</tr>
+				<tr>
+					<td>195</td>
+					<td>[2]</td>
+					<td>Try to build in-house when it is possible</td>
+					<td>Hardware</td>
+				</tr>
+				<tr>
+					<td>196</td>
+					<td>[8]</td>
+					<td>Choose a Green Data Center to design a Green System</td>
+					<td>Hardware</td>
+				</tr>
+				<tr>
+					<td>197</td>
+					<td>[8]</td>
+					<td>Choose a well-planned data center to efficiently use the cooling system.</td>
+					<td>Hardware</td>
+				</tr>
+				<tr>
+					<td>198</td>
+					<td>[8]</td>
+					<td>Identify hardware provisioning over a period.</td>
+					<td>Hardware</td>
+				</tr>
+				<tr>
+					<td>199</td>
+					<td>[8]</td>
+					<td>Choose high-performance desktops and laptops that use efficiently hardware technologies.</td>
+					<td>Hardware</td>
+				</tr>
+				<tr>
+					<td>200</td>
+					<td>[1]</td>
+					<td>Involve the customer from the start of the software development till its completion.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>201</td>
+					<td>[1]</td>
+					<td>Keep minimum development team for strong interaction and development.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>202</td>
+					<td>[1]</td>
+					<td>Plan a schedule for the increments release to customer.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>203</td>
+					<td>[1]</td>
+					<td>Follow short development cycles/iterations</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>204</td>
+					<td>[1]</td>
+					<td>Plan sprint review at the end of each sprint.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>205</td>
+					<td>[1]</td>
+					<td>Involve the customer throughout software development to validate the work in iteration.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>206</td>
+					<td>[1]</td>
+					<td>Use acceptance testing to validate the requirements of customer.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>207</td>
+					<td>[1]</td>
+					<td>Avoid defect backlogs from the early days for each software development.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>208</td>
+					<td>[1]</td>
+					<td>Focus on rapid software development by spending less time in analysis and design phases.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>209</td>
+					<td>[1]</td>
+					<td>Focus on producing the working code instead of heavy documentations.</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>210</td>
+					<td>[1]</td>
+					<td>Do not rely heavily on written documents for requirement specifications, design, and testing</td>
+					<td>Sustainable Practices</td>
+				</tr>
+				<tr>
+					<td>211</td>
+					<td>[8]</td>
+					<td>Identify practices of Development-Related Proprieties like modifiability, reusability, portability and supportability.</td>
+					<td>Characteristic</td>
+				</tr>
+				<tr>
+					<td>212</td>
+					<td>[19]</td>
+					<td>Functional suitability, performance efficiency and maintainability can participate in both positive and negative interactions with sustainability</td>
+					<td>Characteristic</td>
+				</tr>
+				<tr>
+					<td>213</td>
+					<td>[19]</td>
+					<td>Sustainability is more than only maintainability of software. A sustainable product should have a lower impact when introducing changes (reusability) or should improve usability that can make the product lifecycle longer</td>
+					<td>Characteristic</td>
+				</tr>
+				<tr>
+					<td>214</td>
+					<td>[19]</td>
+					<td>Reliability has a potentially positive interaction with sustainability</td>
+					<td>Characteristic</td>
+				</tr>
+				<tr>
+					<td>215</td>
+					<td>[19]</td>
+					<td>Usability can have a positive interaction with sustainability when addressing indirect sustainability impacts. Direct sustainability impact can have a negative interaction with usability</td>
+					<td>Characteristic</td>
+				</tr>
+				<tr>
+					<td>216</td>
+					<td>[19]</td>
+					<td>Quality attributes such as maintainability, portability and usability promote software perdurability</td>
+					<td>Characteristic</td>
+				</tr>
+				<tr>
+					<td>217</td>
+					<td>[19]</td>
+					<td>Modularity is likely to be related to greenability for two different reasons.</td>
+					<td>Characteristic</td>
+				</tr>
+				<tr>
+					<td>218</td>
+					<td>[21]</td>
+					<td>The outcome of most scenario based evaluation methods is still largely determined by the experience of the participants</td>
+					<td>Team Experience</td>
+				</tr>
+				<tr>
+					<td>219</td>
+					<td>[8]</td>
+					<td>Have one or more stakeholders for each sustainability aspects economic, social, human, social, technical and environmental.</td>
+					<td>Team organization</td>
+				</tr>
+				<tr>
+					<td>220</td>
+					<td>[1]</td>
+					<td>Appropriately coach the development team before the project starts.</td>
+					<td>Team Training</td>
+				</tr>
+				<tr>
+					<td>221</td>
+					<td>[8]</td>
+					<td>Raise awareness of individuals about environment protection</td>
+					<td>Team Training</td>
+				</tr>
+				<tr>
+					<td>222</td>
+					<td>[8]</td>
+					<td>Develop a Green IT systems with skillful employees.</td>
+					<td>Team Training</td>
+				</tr>
+				<tr>
+					<td>223</td>
+					<td>[22]</td>
+					<td>Provide software engineers with varying situation awareness for each activity of software engineerings such as RE, Modeling, Construction, Code review and deployment</td>
+					<td>Team Training</td>
+				</tr>
+				<tr>
+					<td>224</td>
+					<td>[22]</td>
+					<td>Software Engineers must know how to learn and develop a high level of education</td>
+					<td>Team Training</td>
+				</tr>
+				<tr>
+					<td>225</td>
+					<td>[22]</td>
+					<td>Software engineers should be able to acquire education from the publications and other data sources</td>
+					<td>Team Training</td>
+				</tr>
+				<tr>
+					<td>226</td>
+					<td>[22]</td>
+					<td>Introduce sustainable software engineering education and knowledge in Software engineering Curricula</td>
+					<td>Team Training</td>
+				</tr>
+				<tr>
+					<td>227</td>
+					<td>[1]</td>
+					<td>Focus on technical excellence of developers to achieve simple and meaningful design.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>228</td>
+					<td>[2]</td>
+					<td>Choose faster code over future hardware</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>229</td>
+					<td>[2]</td>
+					<td>Try to use optimum memory of the computer</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>230</td>
+					<td>[2]</td>
+					<td>Support for old and new hardware</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>231</td>
+					<td>[2]</td>
+					<td>avoid hardware specific api's</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>232</td>
+					<td>[2]</td>
+					<td>avoid resources intensive api's</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>233</td>
+					<td>[2]</td>
+					<td>automate code generation</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>234</td>
+					<td>[2]</td>
+					<td>automate tests</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>235</td>
+					<td>[2]</td>
+					<td>performance scalability and resource testing</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>236</td>
+					<td>[2]</td>
+					<td>minimize installation size</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>237</td>
+					<td>[2]</td>
+					<td>avoid installation with removable media</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>238</td>
+					<td>[2]</td>
+					<td>prefer online installation and license validation</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>239</td>
+					<td>[2]</td>
+					<td>avoid software archeology</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>240</td>
+					<td>[2]</td>
+					<td>avoid reverse engineering</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>241</td>
+					<td>[2]</td>
+					<td>avoid software migration</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>242</td>
+					<td>[2]</td>
+					<td>compress data for storage</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>243</td>
+					<td>[2]</td>
+					<td>maintain electronic artifacts</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>244</td>
+					<td>[2]</td>
+					<td>avoid datacenters for storage</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>245</td>
+					<td>[2]</td>
+					<td>Reduce unwanted redundancy of data which would let more storage  be available for future applications resulting in lesser hardware, which along with the environment aspects would be cheaper and easier to maintain. Duplication of data occurs in many systems where the same data is  stored in different storages for different usages. On example is OSS and BI system where some duplication of data occurs due to the nurture of the problem. The design needs to look at such aspects and try to reduce unwanted redundancy. The requirement to devise smarter software to  exploit parallel, multiprocessor  architectures  will  inevitably  mean  more efficient  use  of  hardware  resources  and  better  coding techniques all round </td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>246</td>
+					<td>[2]</td>
+					<td>Use  the  ‘environment  friendly’  bestcoding  practices.  The  challenge  here  is  the  bringing  the efficiency  into  the  code  so  that  lesser  system  resources are utilized but the software should not get less performant in terms of processing speed, latency etc. </td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>247</td>
+					<td>[2]</td>
+					<td>Focus  on  using  the  existing  infrastructure  as  opposed to buying new hardware. In many companies most of the server  capacities  are  grossly  under utilized  and  yet  new hardware is purchased. Over years, companies have purchased  hardware  on  an  ad  hoc  per  requirement basiswhich has led to a huge bank of servers and storages. These  not  only  consume  more  power  and  have  massive cooling  and maintenance requirements,  an  analysis  willshow  that  such  a  huge  bank  of  hardware  is  not  needed. Consolidation  of  multiple  servers/storages  into a fewer number of these can be planned and implemented</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>248</td>
+					<td>[8]</td>
+					<td>Adjust automatically servers CPU voltage.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>249</td>
+					<td>[8]</td>
+					<td>Apply compilation optimization techniques such as performance.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>250</td>
+					<td>[8]</td>
+					<td>Avoid the use of Non-pure functions that have input parameters such as global variables and objects.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>251</td>
+					<td>[8]</td>
+					<td>Avoid write C++ interactive algorithms without a GNU Compile Collection (GCC).</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>252</td>
+					<td>[8]</td>
+					<td>Build a website with less flash contents.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>253</td>
+					<td>[8]</td>
+					<td>Identify user's monitor resolution</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>254</td>
+					<td>[8]</td>
+					<td>Perform tuning database instructions</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>255</td>
+					<td>[8]</td>
+					<td>Reduce the amount of complex code by using memoization techniques.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>256</td>
+					<td>[8]</td>
+					<td>Reduce the amount of videos in the web page</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>257</td>
+					<td>[8]</td>
+					<td>Reduce the size, resolution or number of images in the web page.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>258</td>
+					<td>[8]</td>
+					<td>Reduce the usage of JavaScript in the web page.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>259</td>
+					<td>[8]</td>
+					<td>Reduce the video resolution inside the web pages.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>260</td>
+					<td>[8]</td>
+					<td>Reduce the web page rendering</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>261</td>
+					<td>[8]</td>
+					<td>Use of pure function to write code and allow memoization.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>262</td>
+					<td>[8]</td>
+					<td>Reduce the use of third party servers.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>263</td>
+					<td>[8]</td>
+					<td>Use of memoization programming technique</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>264</td>
+					<td>[8]</td>
+					<td>Use of user interface components can impact the energy consumption.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>265</td>
+					<td>[8]</td>
+					<td>Use of virtualized architectures can reduce the cost of dedicated hardware.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>266</td>
+					<td>[8]</td>
+					<td>Monitor servers activities when respond to users request.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>267</td>
+					<td>[8]</td>
+					<td>Set up reconfiguration actions when the application response time is outside a pre-defined configuration.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>268</td>
+					<td>[8]</td>
+					<td>Configure web server setting to reduce the energy consumption.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>269</td>
+					<td>[8]</td>
+					<td>Configure web servers to attend specifically the web application functionalities.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>270</td>
+					<td>[8]</td>
+					<td>Define memory allocation policy</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>271</td>
+					<td>[8]</td>
+					<td>Avoid to develop noise systems.</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>272</td>
+					<td>[8]</td>
+					<td>Implement non-functional requirements</td>
+					<td>Technical Excellence</td>
+				</tr>
+				<tr>
+					<td>273</td>
+					<td>[1][2]</td>
+					<td>Use the existing tools for software development such as Jira, Axosoft on time Scrum, and LeanKit.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>274</td>
+					<td>[2]</td>
+					<td>Use electronic documentation</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>275</td>
+					<td>[2]</td>
+					<td>Collect requirements through electronic means</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>276</td>
+					<td>[2]</td>
+					<td>Use online forms and questionnaires</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>277</td>
+					<td>[8]</td>
+					<td>Use of a tool to detect class and methods that mostly consumes energy.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>278</td>
+					<td>[8]</td>
+					<td>Use of a tool to stores energy consumption samples.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>279</td>
+					<td>[8]</td>
+					<td>Use of Power consumption measurement tool to identify design patterns' energy consumption.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>280</td>
+					<td>[8]</td>
+					<td>Use of tool to estimate energy consumption at a code level of the application.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>281</td>
+					<td>[8]</td>
+					<td>Use of tool to monitor at runtime the power consumption of software.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>282</td>
+					<td>[8]</td>
+					<td>Change the device for online newspapers use of e-readers devices instead of PC/laptops is advice.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>283</td>
+					<td>[8]</td>
+					<td>Use of devices that do not cause too much pollution.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>284</td>
+					<td>[21]</td>
+					<td>Use integration methods to combine qualitative and quantitative metrics with  architecture recovery tools or automated improvement tools </td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>285</td>
+					<td>[22]</td>
+					<td>Provide sustainable software engineering tools and methods to software engineers</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>286</td>
+					<td>[22]</td>
+					<td>Avoid tools and methods that affect software engineers in their work negatively</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>287</td>
+					<td>[22]</td>
+					<td>Demonstrate the current tools and methodologies applicability to software engineers.</td>
+					<td>Tools</td>
+				</tr>
+				<tr>
+					<td>288</td>
+					<td>[2]</td>
+					<td>Minimize travel</td>
+					<td>E-waste</td>
+				</tr>
+				<tr>
+					<td>289</td>
+					<td>[2]</td>
+					<td>Avoid paper</td>
+					<td>E-waste</td>
+				</tr>
+				<tr>
+					<td>290</td>
+					<td>[1][8]</td>
+					<td>Ensure team spirit and forward self‐motivation for better sustainable software productivity.</td>
+					<td>Work Environment</td>
+				</tr>
+				<tr>
+					<td>291</td>
+					<td>[8]</td>
+					<td>Derive sustainable system vision.</td>
+					<td>Work Environment</td>
+				</tr>
+				<tr>
+					<td>292</td>
+					<td>[2]</td>
+					<td>Meeting rooms with natural light</td>
+					<td>Work Environment</td>
+				</tr>
+				<tr>
+					<td>293</td>
+					<td>[2]</td>
+					<td>Avoid air-conditioning</td>
+					<td>Work Environment</td>
+				</tr>
+				<tr>
+					<td>294</td>
+					<td>[8]</td>
+					<td>Define a mechanism of awards for rating employees' green behaviors.</td>
+					<td>Work Environment</td>
+				</tr>
+				<tr>
+					<td>295</td>
+					<td>[8]</td>
+					<td>Identify individuals satisfaction</td>
+					<td>Work Environment</td>
+				</tr>
+				<tr>
+					<td>296</td>
+					<td>[1][8]</td>
+					<td>Change the organizational culture to develop Green IT systems.</td>
+					<td>Work Environment</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<a href="index.html" class="btn btn-warning">Return to index</a>
+		<a href="reference.html" class="btn btn-warning">See references</a>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	</div>
+</body>
+</html>
