@@ -277,16 +277,15 @@
   journal = {International Journal of Advanced Computer Science and Applications}
 }
 
-@inproceedings{Debbarma2016,
-  year = {2016},
-  month = dec,
+@InProceedings{Debbarma2016,
+  author    = {Tribid Debbarma and K Chandrasekaran},
+  booktitle = {International Conference on Recent Advances and Innovations in Engineering},
+  title     = {Green measurement metrics towards a sustainable software: A systematic literature review},
+  year      = {2016},
+  address   = {Jaipur, India},
+  month     = dec,
   publisher = {IEEE},
-  author = {Tribid Debbarma and K Chandrasekaran},
-  title = {Green measurement metrics towards a sustainable software: A systematic literature review},
-  booktitle = {International Conference on Recent Advances and Innovations in Engineering },
-  address = {Jaipur, India}, 
-  series = {ICRAIE'16}
+  series    = {ICRAIE'16},
 }
-
 
 @Comment{jabref-meta: databaseType:bibtex;}
