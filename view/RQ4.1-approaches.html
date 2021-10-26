@@ -1,0 +1,2138 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<title>Sustainable Software Systems: The Core Characteristics and Their Achievement</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+		<script type="text/javascript" src="resources/js/functions.js"></script>
+
+	</head>
+
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item ">
+					<a class="nav-link" href="../index.html">Index <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" title="RQ1 - summarizes the current understandings to define what are exactly sustainable software systems" href="RQ1-understandings.html">Understandings</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" title="RQ2 - summarizes the resources taken into account when considering sustainability in software systems" href="RQ2-resources.html">Resources</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" title="RQ3 - Summarizes the critical factors that hamper or contribute for developing sustainable software" href="RQ3-criticalfactors.html">Critical Factors</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" title="RQ4.1 - summarizes approaches mentioned in recent literature to achieve sustainable software" href="RQ4.1-approaches.html">Approaches</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" title="RQ4.2 - summarizes guidelines to achieve sustainable software" href="RQ4.2-guidelines.html">Guidelines</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" title="See the full list of references" href="references.html">References</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<body>
+
+		<div class="container">
+			<h1 class="jumbotron" style="text-align:center">Sustainable Software Systems: The Core Characteristics and Their Achievement</h1>
+			<div style="margin-top:3em; margin-bottom: 3em;">
+				<div>Sustainability for software systems started to be discussed in 2009 in <a href="https://www.cs.uoregon.edu/events/icse2009/specialSessions/#planet"> ICSE special session for the plannet </a>. Despite this topic is considered relatively new in software engineering the community already proposed many approaches to achieve sustainability. Thus, we provide below a table of 98 approaches mentioned in literature as means to leverage sustainability in software systems.</div>
+
+
+			</div>
+			<div style="text-align: center;">
+				<img style="width: 65%;" src="resources/images/Approaches_venn_v2.png">
+			</div>
+			<div class="jumbotron">
+				<label for="classifications">Filter by classification</label>
+
+				<select name="classifications" id="myInput" onchange="myFunction('approaches')" >
+					<option value="">Choose a classification</option>
+					<option value="Framework">Framework</option>
+					<option value="Method">Method</option>
+					<option value="Model">Model</option>
+					<option value="Technique">Technique</option>
+					<option value="Tool">Tool</option>
+					<option value="Metric">Metric</option>
+				</select>
+			</div>
+
+			<table id="approaches" class="table table-bordered table-hover table-striped">
+				<thead>
+					<tr class="thead-dark">
+						<th>ID</th>
+						<th style="width: 10%;">Primary Study BibID</th>
+						<th>Mentioned in (Secondary study ID)</th>
+						<th>Type</th>
+						<th>Title</th>
+						<th>Year</th>
+						<th>Approach Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>A1</td>
+						<td>Briand1993</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>Measuring and assessing maintainability at the end of high level design.</td>
+						<td>1993</td>
+						<td>In this paper, a comprehensive approach for evaluating the high-level design of software systems which is summarized and presented. Also, the author presents a generic formalization for metrical notions independent of any programming paradigm, which includes coupling and cohesion besides complexity-based and class-based metrics.</td>
+					</tr>
+					<tr>
+						<td>A2</td>
+						<td>Briand1996</td>
+						<td>21</td>
+						<td>Framework</td>
+						<td>Property-based software engineering measurement</td>
+						<td>1996</td>
+						<td>In order to provide some guidelines for the analyst in charge of defining product measures, a framework was proposed for software measurement where various software measurement concepts are distinguished and their specific properties defined in a generic manner. Such a framework is, by its very nature, somewhat subjective and there are possible alternatives to it. However, it is a practical framework since the properties are interesting and all the concepts can be distinguished by different sets of properties.</td>
+					</tr>
+					<tr>
+						<td>A3</td>
+						<td>Lakos1996</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>Large-scale C++ software design</td>
+						<td>1996</td>
+						<td>Defines a metric called Cumulative Component Dependency (CCD), which is the sum of required  dependencies by a component within a subsystem.</td>
+					</tr>
+					<tr>
+						<td>A4</td>
+						<td>Burmeister1997</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Application of multi-agent systems in traffic and transportation</td>
+						<td>1997</td>
+						<td>Propose Agent-oriented techniques as a new advance in information technology can help to respond to the growing interest in making traffic and transportation more efficient, resource-saving and ecological. The authors give an overview of a diverse range of applications where multi-agent systems promise to create a great impact in this domain. To demonstrate the ideas behind AOTs and their applicability in this domain, two applications currently under development at Daimler-Benz Research are described in some detail.</td>
+					</tr>
+					<tr>
+						<td>A5</td>
+						<td>Burmeister1997</td>
+						<td>14</td>
+						<td>Method / Tool</td>
+						<td>Application of multi-agent systems in traffic and transportation</td>
+						<td>1997</td>
+						<td>Propose simulations to make traffic and transportation more efficient, resource-saving and ecological. The applications proposed in this domain are mainly used for simulation and experimentation. Agent-oriented tools and development environments like DASEDIS and dMARS facilitate rapid prototyping of systems. They provide a natural modularisation of the system in terms of agents that can be executed concurrently or even distributed among different machines.</td>
+					</tr>
+					<tr>
+						<td>A6</td>
+						<td>Mancoridis1999, Mitchell2006</td>
+						<td>21</td>
+						<td>Metric / Tool</td>
+						<td>Bunch: A clustering tool for the recovery and maintenance of\nsoftware system structures</td>
+						<td>1999</td>
+						<td>Introduce a clustering tool called BUNCH, which tries to optimize the proposed modularization quality metric. This metric is based on a partitioned module dependency graph and computed by the difference of the average inter- and intra-connectivity of the partitions.</td>
+					</tr>
+					<tr>
+						<td>A7</td>
+						<td>Dong2012</td>
+						<td>14</td>
+						<td>Tool</td>
+						<td>Research on the development of green product life cycle analysis tool</td>
+						<td>2002</td>
+						<td>On the basis of the life cycle model, a software tool for green product life cycle analysis, named GPLCAS, is developed. In order to make the system function clear, IDEF0 is adopted for the overall design of GPLCAS. To increase the reusability, expandability and maintainability of GPLCAS, function unit and process classes are used for abstract products and their life cycle activity. In the end, a case study is given to show the functions of GPLCAS.</td>
+					</tr>
+					<tr>
+						<td>A8</td>
+						<td>Martin2002</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>Agile Software Development: Principles,\nPatterns, and Practices</td>
+						<td>2002</td>
+						<td>Defines metrics for software packages, i.e., groups of related classes (e.g., java packages, C++- projects, low-level modules).  These include package afferent coupling, efferent coupling, abstractness, instability, distance from main sequence, and package dependency cycles. Several tools support measuring these metrics (e.g., JDepend, CppDepend, STAN).</td>
+					</tr>
+					<tr>
+						<td>A9</td>
+						<td>Clements2003</td>
+						<td>21</td>
+						<td>Method</td>
+						<td>Evaluating software architectures: methods and case studies</td>
+						<td>2003</td>
+						<td>ATAM - identify trade-offs between different quality attributes for a system and reveal sensitivity points in na architecture</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Bengtsson2004</td>
+						<td>21</td>
+						<td>Method</td>
+						<td>Architecture-level modifiability analysis (ALMA)</td>
+						<td>2004</td>
+						<td>ALMA - predict maintenance effort, to assess risks, or to compare candidate architecture to modifiability</td>
+					</tr>
+					<tr>
+						<td>A11</td>
+						<td>Vallerio2006</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Energy-efficient graphical user interface design</td>
+						<td>2006</td>
+						<td>This paper is the first to explore how GUIs can be designed to improve system energy efficiency. We investigate how GUI design approaches should be changed to improve system. Energy efficiency and provide specific suggestions to mobile computer designers to enable them to develop more energy-efficient systems.</td>
+					</tr>
+					<tr>
+						<td>A12</td>
+						<td>Sarkar2007</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>Api-based and information-theoretic metrics for measuring the quality of software modularization</td>
+						<td>2006</td>
+						<td>API-based and  information-theoretic metrics for measuring modularization quality. The metrics rely on the definition of APIs between modules, module size thresholds, and concept term maps and explicitly exclude any object-oriented features. Each metric is defined between 0 and 1 where higher values are better. Some metrics are derived from the works of Lakos [37] and Martin [44]. The metrics were applied on a number of open source systems (e.g., Apache, MySQL,  Mozilla) as well as a 12 MLOC commercial system [61], but the authors do not provide their tools publicly</td>
+					</tr>
+					<tr>
+						<td>A13</td>
+						<td>Penzenstadler2012d, Penzenstadler2013a</td>
+						<td>2</td>
+						<td>Metric</td>
+						<td>Sustainability  in  software  engineering:  A systematic  literature  review</td>
+						<td>2012</td>
+						<td>Spotlight on quality designing taking into account the estimations of software as far as quality  measurements</td>
+					</tr>
+					<tr>
+						<td>A14</td>
+						<td>Ramakrishnan2007</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Business process ontology and software service models for environmentally sustainable manufacturing enterprises</td>
+						<td>2007</td>
+						<td>In this paper, the authors explore the business process ontology for modelling software services.</td>
+					</tr>
+					<tr>
+						<td>A15</td>
+						<td>Robinson2007</td>
+						<td>14</td>
+						<td>Tool</td>
+						<td>SUNtool - a new modelling paradigm for simulating and optimising urban sustainability</td>
+						<td>2007</td>
+						<td>In this paper, the authors describes the development and application of a new unique tool to support designers to optimise the sustainability of urban neighbourhoods (SUNtool)</td>
+					</tr>
+					<tr>
+						<td>A16</td>
+						<td>SantAnna2007</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>On the modularity of software architectures: A concern-driven measurement framework</td>
+						<td>2007</td>
+						<td>Propose a set of 11 concern-driven metrics to measure the modularity of a software system. An architectural concern is defined as a partition of system components with a common goal (e.g., GUI, persistence, distribution). Examples for the metrics are concern diffusion (i.e., counts the number of components or interfaces for a given concern), coupling between concerns (i.e., counts for a concern how components relate itself and other concerns), or interface complexity. The authors compare the modularization of aspect-oriented and non aspect-oriented systems using their metrics in three case studies</td>
+					</tr>
+					<tr>
+						<td>A17</td>
+						<td>Pennington2008</td>
+						<td>12</td>
+						<td>Method</td>
+						<td>Indirectly driven knowledge modelling in ecology</td>
+						<td>2008</td>
+						<td>Describe entity-relationship modeling , as means to represent their data, knowledge, or information models.</td>
+					</tr>
+					<tr>
+						<td>A18</td>
+						<td>Sarkar2008</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>Metrics for measuring the quality of modularization of large-scale object-oriented software</td>
+						<td>2008</td>
+						<td>Extend their former work on module metrics with 9 additional metrics concerning objectoriented relationships (e.g., inheritance, association) between higher-level modules in large OO-systems. These metrics for example measure the extent of the fragile baseclass problem or inheritance relations between higher-level modules. They were measured for eight open source systems between 30 KLOC and 2.5 MLOC, where a human modularization achieved significantly higher values than a randomized modularization based on assigning classes arbitrarily to modules.</td>
+					</tr>
+					<tr>
+						<td>A19</td>
+						<td>Sangwan2008</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>Structural epochs in the complexity of software over time</td>
+						<td>2008</td>
+						<td>Introduce the complexity measurement framework Structure 101, which uses a metric called excessive structural complexity (XS). It is computed as the product of the degree of cyclic dependencies violations (metric ’tangled’) and a multi-level complexity metric (’fat’), which can also be determined on the package or module level.</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Du20</td>
+						<td>12</td>
+						<td>Technique</td>
+						<td>Expert control based on neural networks for controlling greenhouse environment</td>
+						<td>2009</td>
+						<td>Propose an algorithm of ANN with heuristic logic proved to be very effective in meeting formal requirements for greenhouse control such as set point and tracking set point. ANN modeling set point is feasible. The key technique for greenhouse environment control uses ANN and heuristic logic reasonably to create a good algorithm.\nThe proposed control algorithm is currently implemented in based CAN bus control system for greenhouse environment control.</td>
+					</tr>
+					<tr>
+						<td>A21</td>
+						<td>Ramona2009</td>
+						<td>12</td>
+						<td>Method</td>
+						<td>Creating and consolidating eco-economics through financial and fiscal instruments. contribution of green taxes</td>
+						<td>2009</td>
+						<td>Analyze the creation and consolidation of eco-economics through financial and fiscal instruments (contribution of green taxes)</td>
+					</tr>
+					<tr>
+						<td>A22</td>
+						<td>Cabot2009</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Integrating sustainability in decision-making processes: A modelling strategy</td>
+						<td>2009</td>
+						<td>A popular language was used for modeling  early requirements as a way to visualize the impact of alternative options on sustainability goals and to analyze the conflicts between sustainability and other problem-specific objectives.</td>
+					</tr>
+					<tr>
+						<td>A23</td>
+						<td>Johansson2009</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Discrete event simulation to generate requirements specification for sustainable manufacturing systems design</td>
+						<td>2009</td>
+						<td>Discrete Event Simulation (DES) in combination with Life Cycle\nAssessment (LCA) system can be utilized to evaluate a\nmanufacturing system performance taking into account\nenvironmental measures before actual construction or use of the\nmanufacturing system</td>
+					</tr>
+					<tr>
+						<td>A24</td>
+						<td>Anan2009</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>An architecture-centric software maintainability assessment using information theory.</td>
+						<td>2009</td>
+						<td>Propose an approach that is similar to Allen and Khoshgoftaar [2] and use information-theory to\nmeasure the coupling between modules. The authors compute the entropy of an architectural slicing (i.e., a module layer) and condense the values to a metric called ”architecture maintainability effort”. The metrics were applied for a number of artificial module dependency graphs.</td>
+					</tr>
+					<tr>
+						<td>A25</td>
+						<td>Sethi2009</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>From retrospect to prospect: Assessing modularity and stability from software architecture</td>
+						<td>2009</td>
+						<td>Base their metrics not on source code, but instead on an augmented constraint network and design structure matrix derived from a higher-level UML component diagram, which also captures architectural concerns and design rules. They define metrics such as decision volatility (i.e., impact of environmental conditions on a design decision) and concern overlap. They evaluate the metrics on eight object-oriented and aspect-oriented releases of a software product line and find for example that the aspect-oriented design is better in accommodating optional features, but also leads to a higher design volatility</td>
+					</tr>
+					<tr>
+						<td>A26</td>
+						<td>Appasami2011, Lo20</td>
+						<td>2</td>
+						<td>Tool</td>
+						<td>Green computing methodology for next generation computing scientists.</td>
+						<td>2010</td>
+						<td>Incorporate virtualization, shutting applications which are no more being used, effective calculations by composing a minimal outline of codes and information structures, diminishment of parallelism overhead by creating proficient burden adjusting calculations, fine grained green figuring, and making vitality assignment calculations for steering information</td>
+					</tr>
+					<tr>
+						<td>A27</td>
+						<td>AlvaresdeOliveira20</td>
+						<td>2</td>
+						<td>Method</td>
+						<td>Self-optimisation of the energy footprint in service-oriented architectures</td>
+						<td>2010</td>
+						<td>Exhibited a methodology taking into account periodic measurement of GPIs and QoS and reception of Service Oriented design is utilized to streamline vitality productivity at the Software-as-Service layer.</td>
+					</tr>
+					<tr>
+						<td>A28</td>
+						<td>Corbett20</td>
+						<td>2</td>
+						<td>Metric</td>
+						<td>Unearthing the Value of Green IT</td>
+						<td>2010</td>
+						<td>Cost is principle aspect from monetary circle of triple base of Sustainability.</td>
+					</tr>
+					<tr>
+						<td>A29</td>
+						<td>Sissa20</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Green Software</td>
+						<td>2010</td>
+						<td>The actual computer lifecycle is shorter than the potential one. Some real data and interview will give evidence on how software improvements, aimed at making the information system configuration more effective, will lead to energy consumption reduction.</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Bingshan20</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Knowledge-based environmental information system for sustainable development of wetland area</td>
+						<td>2010</td>
+						<td>This paper is to develop knowledge base system integrate with the existing information database and improve the knowledge base associated with environmental decision processes to help the sustainable development of wetland.</td>
+					</tr>
+					<tr>
+						<td>A31</td>
+						<td>Ager20</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Internet map services: new portal for global ecological monitoring, or geodata junkyard?</td>
+						<td>2010</td>
+						<td>This work is part of a larger project at the Western Wildland Environmental Threat Assessment Center to build an early warning and monitoring system for specific wildland threats to human and ecological values.</td>
+					</tr>
+					<tr>
+						<td>A32</td>
+						<td>Naumann2011</td>
+						<td>[2][5][11][14][16]</td>
+						<td>Model</td>
+						<td>The greensoft model: A reference model for green and sustainable software and its engineering</td>
+						<td>2011</td>
+						<td>The authors propose definitions of the terms “Green and Sustainable Software” and “Green and Sustainable Software Engineering”, then we outline a conceptual reference model, the GREENSOFT Model. This model includes a cradle-to-grave product life cycle model for software products, sustainability metrics and criteria for software, software engineering extensions for sustainably sound software design and development, as well as appropriate guidance.</td>
+					</tr>
+					<tr>
+						<td>A33</td>
+						<td>Gupta2011</td>
+						<td>2</td>
+						<td>Metric</td>
+						<td>A Framework of Creating Intelligent Power Profiles in Operating Systems\nto Minimize Power Consumption and Greenhouse Effect Caused by Computer\nSystems.</td>
+						<td>2011</td>
+						<td>These techniques consistently measure the energy utilization of running software in a given timeframe and can be consolidated in operating systems</td>
+					</tr>
+					<tr>
+						<td>A34</td>
+						<td>Taina2011</td>
+						<td>2</td>
+						<td>Metric</td>
+						<td>Good, bad, and beautiful software-In search of green software quality factors</td>
+						<td>2011</td>
+						<td>Endeavors are centered on having clear measurements for measuring the carbon impression of software development, the measure of assets utilized by programming, and the amount of harm it does to environment</td>
+					</tr>
+					<tr>
+						<td>A35</td>
+						<td>Bravi2011</td>
+						<td>12</td>
+						<td>Method</td>
+						<td>Life cycle assessment of a micromorph photovoltaic system</td>
+						<td>2011</td>
+						<td>Propose a life cycle analysis about energy consume</td>
+					</tr>
+					<tr>
+						<td>A36</td>
+						<td>Mahaux2011</td>
+						<td>[14][19]</td>
+						<td>Method</td>
+						<td>Discovering Sustainability Requirements: An Experience Report</td>
+						<td>2011</td>
+						<td>This paper reports on a software project in which sustainability requirements were treated as first class quality requirements, and as such systematically elicited, analysed and documented. The authors intended to assess how current techniques support these activities. Beyond raising awareness on the importance of sustainability concerns in requirements engineering, this experience report suggests that, while a lot of work remains to be done, small and easy steps may already lead us to more sustainable systems. It also contributes to the agenda of requirements engineering researchers concerned with sustainability.</td>
+					</tr>
+					<tr>
+						<td>A37</td>
+						<td>Maharmeh2011</td>
+						<td>14</td>
+						<td>Framework</td>
+						<td>Application of a composite process framework for managing green ICT applications development</td>
+						<td>2011</td>
+						<td>This paper presents the use of Composite Process Framework for Green ICT Applications Development. This framework for software development, as its name suggests, integrates different elements of software development processes such as waterfall, iterative-incremental and agile approaches to software development.</td>
+					</tr>
+					<tr>
+						<td>A38</td>
+						<td>Shenoy2011</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Green software development model: An approach towards sustainable software development</td>
+						<td>2011</td>
+						<td>This paper discusses the changes in the existing SDLC and suggests appropriate steps which can lead to lower carbon emissions, power and paper use, thus helping organizations to move towards greener and sustainable software development.</td>
+					</tr>
+					<tr>
+						<td>A39</td>
+						<td>Amsel2011</td>
+						<td>[14][24]</td>
+						<td>Method, Tool</td>
+						<td>Toward sustainable software engineering</td>
+						<td>2011</td>
+						<td>In this paper, the author propose a tool called GreenTracker, which measures the energy consumption of software in order to raise awareness about the environmental impact of software usage</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Bhalla2011</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Applying Service Oriented Architecture and Cloud Computing for a Greener Traffic Management</td>
+						<td>2011</td>
+						<td>The authors discussed various scenarios where Cloud computing technology can be utilised resulting in further optimisation of the computing resources and therefore reducing the carbon emission. WiMAX was proposed as a method to facilitate communication to and from fast moving cars. WiMAX combined with GPS (Global Positioning System) technology can facilitate building an efficient traffic management system.</td>
+					</tr>
+					<tr>
+						<td>A41</td>
+						<td>Schrammel2011</td>
+						<td>14</td>
+						<td>Metric</td>
+						<td>FORE-Watch - The Clock That Tells You When to Use: Persuading Users to Align Their Energy Consumption with Green Power Availability</td>
+						<td>2011</td>
+						<td>This paper presents and discuss requirements identified by use of literature analysis, focus groups and end-user questionnaires, outline approaches to calculate basic power generation forecasts based on weather forecast data and present an ambient interface concept designed to meet the identified requirements.</td>
+					</tr>
+					<tr>
+						<td>A42</td>
+						<td>Koziolek2011</td>
+						<td>16</td>
+						<td>Metric</td>
+						<td>Sustainability Evaluation of Software Architectures: A Systematic Review</td>
+						<td>2011</td>
+						<td>The authors aims to measure  the sustainability of a software architecture both during early design using scenarios and during evolution using scenarios and metrics, which is highly relevant in practice</td>
+					</tr>
+					<tr>
+						<td>A43</td>
+						<td>Marcus2011</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>User-experience for Personal Sustainability\nSoftware: Determining Design Philosophy and Principles</td>
+						<td>2011</td>
+						<td>This paper describes the research and analysis that led to a design philosophy and a set of principles that were then “tested out” in a series of short prototype applications intended to make more compelling and engaging business applications incorporating sustainability and taking advantage of people’s interests, expertise, and experience with sustainability.</td>
+					</tr>
+					<tr>
+						<td>A44</td>
+						<td>Rahman2011</td>
+						<td>19</td>
+						<td>Tool</td>
+						<td>Design and implementation\nof an open framework for ubiquitous carbon footprint calculator applications</td>
+						<td>2011</td>
+						<td>In this paper the authors proposed an Open Carbon Footprint Calculator application platform, OCFF that can determine a user's carbon footprint based on his/her dynamic activity. Given the prevalence and potential influence, OCFF can provide greater public benefit by providing greater consistency and ubiquity. develop carbon footprintcalculators</td>
+					</tr>
+					<tr>
+						<td>A45</td>
+						<td>Mahaux2012</td>
+						<td>2</td>
+						<td>Method</td>
+						<td>Integrating the complexity of sustainability in requirements engineering</td>
+						<td>2012</td>
+						<td>Contend that requirements engineering is basic to the entire software life cycle principally in the application stage where clients are conveyed the framework and anticipate that it will adjust to their prerequisites. They guarantee that proper requirement engineering can help software last more along these lines diminishing the power utilization.</td>
+					</tr>
+					<tr>
+						<td>A46</td>
+						<td>Capra2012</td>
+						<td>[2][19]</td>
+						<td>Metric</td>
+						<td>Is software “green”? Application development environments and energy efficiency in open source applications</td>
+						<td>2012</td>
+						<td>Concentrate on building up a measure of resource efficiency for software applications and outline how application advancement situations can have a hindering impact because of the extra lines of code they include</td>
+					</tr>
+					<tr>
+						<td>A47</td>
+						<td>Penzenstadler2012c</td>
+						<td>2</td>
+						<td>Method</td>
+						<td>Re4es: Support environmental sustainability by requirements engineering</td>
+						<td>2012</td>
+						<td>A requirement engineering methodology is created that permits engineer to deal with sustainability as a top notch quality goal</td>
+					</tr>
+					<tr>
+						<td>A48</td>
+						<td>Lami2012b</td>
+						<td>[2][5][19]</td>
+						<td>Process</td>
+						<td>Software sustainability from a process-centric perspective</td>
+						<td>2012</td>
+						<td>In this paper this problem is addressed from a software process perspective. Sustainability of software process is approached in a systematic way by defining a core set of processes that represent the activities to be performed in order to introduce and integrate the greenness culture in an organization developing software.</td>
+					</tr>
+					<tr>
+						<td>A49</td>
+						<td>Chen2012</td>
+						<td>11</td>
+						<td>Model / Tool</td>
+						<td>An Energy Consumption Model and Analysis Tool for Cloud Computing Environmentss</td>
+						<td>2012</td>
+						<td>In this paper, the authors propose a new energy consumption model and an analysis tool for Cloud environments to address these issues.Energy consumption model</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Curry2012</td>
+						<td>11</td>
+						<td>Metric</td>
+						<td>Sustainable Information Systems and Green Metrics</td>
+						<td>2012</td>
+						<td>Provide Metrics to Data Center power consumption and and standards for greenhouse gas reporting, life cycle impact analysis, energy efficiency within data centres and assessing the maturity of sustainable information and communication technology (SCIT) within organizations.</td>
+					</tr>
+					<tr>
+						<td>A51</td>
+						<td>Murugesan2012</td>
+						<td>11</td>
+						<td>Framework / guidelines/ metrics</td>
+						<td>Green IT: An Overview</td>
+						<td>2012</td>
+						<td>Propose a framework containing guidelines, metrics and a deep discussion about how to produce sustainable softwares</td>
+					</tr>
+					<tr>
+						<td>A52</td>
+						<td>Curry2012</td>
+						<td>11</td>
+						<td>Method</td>
+						<td>Sustainable Information Systems and Green Metrics</td>
+						<td>2012</td>
+						<td>Propose Life-cycle Assessment - also known as life cycle analysis, is a technique to systematically identify resource flows and environmental impacts associated with all the stages of product and service provision. LCA provides a quantitative cradle-to-grave analysis of the products or services’ global environmental costs (i.e. from raw materials through materials processing, manufacture, distribution, use, repair and maintenance and disposal or recycling). The demand for LCA data and tools has accelerated with the growing global demand to assess and reduce GHG emissions from different manufacturing and service sectors</td>
+					</tr>
+					<tr>
+						<td>A53</td>
+						<td>Sahin2012a</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Initial explorations on design pattern energy usage</td>
+						<td>2012</td>
+						<td>In this paper, the authors present a new approach for mapping software design to power consumption and present empirical results of the approach on different software implementations. In particular, we compare the power profiles of software using design patterns against software not using design patterns as a way to explore how high-level design decisions affect an application's energy usage. We show how mappings between software design and power consumption profiles can provide software designers and developers with useful information about the power behavior of the software they are developing. The goal is for software engineers to use this information in designing and developing more energy efficient solutions.</td>
+					</tr>
+					<tr>
+						<td>A54</td>
+						<td>Durdik2012</td>
+						<td>16</td>
+						<td>Guidelines</td>
+						<td>Sustainability guidelines for long-living software systems</td>
+						<td>2012</td>
+						<td>This paper describes how we derived these guidelines and how we applied selected techniques from them in two industrial case studies. We report several lessons learned about sustainable software development.</td>
+					</tr>
+					<tr>
+						<td>A55</td>
+						<td>Jelschen2012</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Towards applying reengineering services to energy-efficient applications</td>
+						<td>2012</td>
+						<td>This paper discusses how software reengineering techniques, like dynamic analysis and refactoring, can be applied to the field of energy-aware computing, to monitor, analyze, and optimize the energy profile of mobile applications and devices.While others considered some reengineering techniques to improveenergy efficiency for mobile applications</td>
+					</tr>
+					<tr>
+						<td>A56</td>
+						<td>Agosta2012</td>
+						<td>19</td>
+						<td>Technique, tool</td>
+						<td>Automatic memoization for energy efficiency in financial applications</td>
+						<td>2012</td>
+						<td>In this paper, we proposed the use of memoization of Java methods to reduce energy consumption in financial applications. To this end, we have introduced an appropriate definition of weak purity, and constructed a prototype that performs pure functions identification as well as automated memoization.</td>
+					</tr>
+					<tr>
+						<td>A57</td>
+						<td>Sabharwal2013</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Enabling green IT through energy-aware\nsoftware</td>
+						<td>2012</td>
+						<td>Present general techniques for computing efficiency, data efficiency and context-awareness as to improve energy efficiency</td>
+					</tr>
+					<tr>
+						<td>A58</td>
+						<td>Mahmoud2013</td>
+						<td>[2][5][11]</td>
+						<td>Model</td>
+						<td>A green model for sustainable software engineering</td>
+						<td>2013</td>
+						<td>In this paper, the authors design a software model that covers all aspects of software related to  green computing. The model is a two level model in which the first level is a hybrid software engineering process between sequential, iterative, and agile software development processes that aims to create a green and sustainable software process.</td>
+					</tr>
+					<tr>
+						<td>A59</td>
+						<td>Dick2013</td>
+						<td>11</td>
+						<td>Model</td>
+						<td>Green software engineering with agile methods</td>
+						<td>2013</td>
+						<td>In this paper, the authors incorporated sustainability issues to the software development process by presenting a generic process model, as well as integrating the Green and Sustainable Software Engineering enhancements into Scrum, This way, software engineers are supported in developing green and sustainable software products.</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Doerflinger2013</td>
+						<td>11</td>
+						<td>Method</td>
+						<td>A Software Development Methodology for Sustainable ICTD Solutions</td>
+						<td>2013</td>
+						<td>The authors present a case study on how we combined and adapted, using an iterative action research refinement approach, established interaction design methods into a software development methodology supporting scalable longterm ICTD software projects: the Technical ICTD Methodology (TIM). The case study is based on the experiences of a series of ICTD projects executed within a major software corporation over a period of more than five years.</td>
+					</tr>
+					<tr>
+						<td>A61</td>
+						<td>Penzenstadler2013a</td>
+						<td>[14][16]</td>
+						<td>Model, Method</td>
+						<td>A generic model for sustainability with process- and product-specific instances</td>
+						<td>2013</td>
+						<td>In this paper, the authors propose a generic sustainability model with instances for companies and projects from various case studies. We thus enable analysis, support and assessment of environmental sustainability in software engineering.</td>
+					</tr>
+					<tr>
+						<td>A62</td>
+						<td>Penzenstadler2013b</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Who is the advocate? Stakeholders for sustainability</td>
+						<td>2013</td>
+						<td>In this paper, we present four approaches of identifying stakeholders for sustainability in a given context: top-down by sustainability dimensions (individual, social, environmental, economic, and technical), by instantiation of a generic list, bottom-up by an organigram, and iteratively by an activity model according to the generic sustainability model.</td>
+					</tr>
+					<tr>
+						<td>A63</td>
+						<td>Grosskop2013</td>
+						<td>14</td>
+						<td>Method</td>
+						<td>Identification of Application-Level Energy-Optimizations</td>
+						<td>2013</td>
+						<td>This paper described a pragmatic method to estimate the\nenergy footprint of a software application and identify\noptimizations at the application level. The author also proposes a  general framework for constructing energy models, based on a node map that represents the structure of the application and its supporting infrastructure and onto which information on work load and energy consumption is projected.</td>
+					</tr>
+					<tr>
+						<td>A64</td>
+						<td>Venters2014</td>
+						<td>16</td>
+						<td>Framework</td>
+						<td>The Blind Men and the Elephant: Towards a Software Sustainability Architectural Evaluation Framework</td>
+						<td>2013</td>
+						<td>This paper proposes a definition of software sustainability and considers how it can be measured empirically in the design and engineering process of software systems. We propose that the development of a  software  sustainability  architectural  evaluation  framework would assist in facilitating a greater holistic view of software sustainability.</td>
+					</tr>
+					<tr>
+						<td>A65</td>
+						<td>Koziolek2013</td>
+						<td>16</td>
+						<td>Metric</td>
+						<td>Measuring Architecture Sustainability.</td>
+						<td>2013</td>
+						<td>Present metrics to evaluate architecture sustainability</td>
+					</tr>
+					<tr>
+						<td>A66</td>
+						<td>kocak2013</td>
+						<td>[16][24]</td>
+						<td>Framework</td>
+						<td>Green Software Development and Design for Environmental Sustainability.</td>
+						<td>2013</td>
+						<td>In this study the authors proposed proposed ANP framework that may be used to help identifying critical requirements and new trade-offs introduced by sustainability requirements.</td>
+					</tr>
+					<tr>
+						<td>A67</td>
+						<td>Bozzelli2013</td>
+						<td>17</td>
+						<td>Metric</td>
+						<td>A systematic literature review on green software metrics</td>
+						<td>2013</td>
+						<td>Propose metrics for measuring energy, performance, utilization, economy, pollution</td>
+					</tr>
+					<tr>
+						<td>A68</td>
+						<td>Lami2014</td>
+						<td>5</td>
+						<td>Framework</td>
+						<td>An ISO/IEC 33000-compliant measurement framework for software process sustainability assessment</td>
+						<td>2014</td>
+						<td>The authors define sustainable software process as a process that can meet established sustainability goals. In addition, the paper defines sustainability levels and process attributes for a sustainable process. Finally, the measurement process is adapted in order to address sustainability concerns</td>
+					</tr>
+					<tr>
+						<td>A69</td>
+						<td>Ardito2014</td>
+						<td>11</td>
+						<td>Guidelines, Metric</td>
+						<td>Green IT – Available data and guidelines for reducing energy consumption in IT systems</td>
+						<td>2014</td>
+						<td>Summarize green IT approaches and present guidelines to write energy efficient software organized according to a taxonomy (also presented in the paper) and energy metrics and benchmarks</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Amri2014</td>
+						<td>11</td>
+						<td>Model</td>
+						<td>Towards a Generic Sustainable Software Model</td>
+						<td>2014</td>
+						<td>In this paper, the authors propose a Generic Sustainable Software Star Model (GS3M) that forms the basis towards a "complete" view of sustainable software. The model covers different sustainability dimensions: environmental, technical, social, individual and economic. For each dimension we define corresponding software sustainability values. To each value are associated software attributes promoting it. And each attribute can be composed of sub-attributes. To this last is associated a well defined metric.</td>
+					</tr>
+					<tr>
+						<td>A71</td>
+						<td>Sahin2014</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Clause, How do code refactorings affect energy usage?</td>
+						<td>2014</td>
+						<td>In this paper, the authors  aim to address the lack of information about the energy efficiency impacts of code refactorings.</td>
+					</tr>
+					<tr>
+						<td>A72</td>
+						<td>Corral2014</td>
+						<td>19</td>
+						<td>Technique, tool</td>
+						<td>Method reallocation to reduce energy\nconsumption: an implementation in Android OS</td>
+						<td>2014</td>
+						<td>In this paper, the authors  investigate the impact that the allocation of a software routine has in the overall energy consumption of a mobile device. We implemented software benchmarks in Java and C and we exercised them in different execution scopes of the Android OS runtime. We measured the amount of energy required to complete each job to determine the energy consumed by each routine, and to know in what cases it is advisable to reallocate the processing job from a regular application to an external execution environment.</td>
+					</tr>
+					<tr>
+						<td>A73</td>
+						<td>Abdulsalam2014</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Program energy efficiency: the impact of language, compiler and implementation choices</td>
+						<td>2014</td>
+						<td>In this paper, the authors conducted a comprehensive study to reveal the impact of programming languages, compiler optimization and implementation choices on program energy efficiency. After analyzing the energy results of three applications, we are able to draw the following conclusions.</td>
+					</tr>
+					<tr>
+						<td>A74</td>
+						<td>Li2014</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>An investigation into energy-saving programming practices\nfor android smartphone app development</td>
+						<td>2014</td>
+						<td>In this paper, the authors conducted a small-scale empirical evaluation of commonly suggested energy-saving and performance-enhancing coding practices. In the evaluation we evaluated the degree to which these practices were able to save energy as compared to their unoptimized code coun- terparts. Our results provide useful guidance for mobile app developers.</td>
+					</tr>
+					<tr>
+						<td>A75</td>
+						<td>Yu2015</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Sensing humanscreen interaction for energy-efficient frame rate adaptation on smartphones</td>
+						<td>2014</td>
+						<td>In this paper, by analyzing the real traces, we have found that scrolling operation consumes a great amount of energy on smartphones. The authors proposed a scrolling-speed-adaptive frame rate controlling system, E3, which significantly reduces the power consumption caused by the scrolling operations while keeping the user experience un-compromised.</td>
+					</tr>
+					<tr>
+						<td>A76</td>
+						<td>Bomfim2014</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Modelling sustainability in a procurement system: an experience report</td>
+						<td>2014</td>
+						<td>The study highlights the advantages and challenges of introducing sustainability into private procurement systems, as well as the suitability of the technique for such a purpose. We believe this experience and its resulting model can be useful to other companies wishing to implement sustainable procurement processes.</td>
+					</tr>
+					<tr>
+						<td>A77</td>
+						<td>Raturi2014</td>
+						<td>19</td>
+						<td>Framework</td>
+						<td>Developing a sustainability non-functional requirements framework</td>
+						<td>2014</td>
+						<td>The authors described an NFR framework that is informed by sustainability models and discuss how it can be used to appropriately elicit and describe sustainability related requirements of the software system to be developed.</td>
+					</tr>
+					<tr>
+						<td>A78</td>
+						<td>Couto2014</td>
+						<td>19</td>
+						<td>Tool</td>
+						<td>Detecting anomalous energy consumption in android applications</td>
+						<td>2014</td>
+						<td>The authors proposed a dynamically calibrated model for energy consumption for the Android ecosystem that supports different devices.</td>
+					</tr>
+					<tr>
+						<td>A79</td>
+						<td>Chang2014</td>
+						<td>19</td>
+						<td>Technique, tool</td>
+						<td>Application behavior analysis in resource consumption for mobile devices</td>
+						<td>2014</td>
+						<td>In this paper, the authors propose a way to select indices to capture the characteristics of a mobile device and then a way to visualize its resource consumption.</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Zhang2014</td>
+						<td>19</td>
+						<td>Tool</td>
+						<td>A green miner's dataset: mining the impact of software change on energy consumption</td>
+						<td>2014</td>
+						<td>In this paper, the authos describe multiple open green mining datasets used in prior green mining work. The dataset includes numerous power traces and parallel system call and CPU/IO/Memory traces of multiple versions of multiple products.</td>
+					</tr>
+					<tr>
+						<td>A81</td>
+						<td>Raturi2015</td>
+						<td>2</td>
+						<td>Method, Metric, Tool</td>
+						<td>Green Software Engineering Environments</td>
+						<td>2015</td>
+						<td>In this paper, the author describe the existing methods, metrics and tools geared toward optimising and monitoring SEE energy consumption. However, the environmental impacts of creating software systems include more that just plug load energy consumption.</td>
+					</tr>
+					<tr>
+						<td>A82</td>
+						<td>Iso33001:2015</td>
+						<td>5</td>
+						<td>Metric</td>
+						<td>ISO33001: ISO/IEC 33001:2015 Information technology</td>
+						<td>2015</td>
+						<td>Measurement software process framework based on ISO/IEC 33000 series</td>
+					</tr>
+					<tr>
+						<td>A83</td>
+						<td>Ardito2015</td>
+						<td>19</td>
+						<td>Framework</td>
+						<td>Understanding green software development: a conceptual framework</td>
+						<td>2015</td>
+						<td>In this article, the authors present a conceptual framework that provides a unifying view of the strategies, models, and tools available so far for designing and developing greener software.</td>
+					</tr>
+					<tr>
+						<td>A84</td>
+						<td>Penzenstadler2015d</td>
+						<td>19</td>
+						<td>Model</td>
+						<td>From Requirements Engineering to Green Requirements\nEngineering</td>
+						<td>2015</td>
+						<td>In this paper, the authors propose an approach of how to incorporate environmental sustainability as an objective from the very start in requirements engineering by using a reference artefact model with a goal model and continuous deduction and refinement. Thereby, software engineers are enabled to strategically align the objective of environmental sustainability with the other objectives for the software system under development.</td>
+					</tr>
+					<tr>
+						<td>A85</td>
+						<td>Penzenstadler2015e</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>A Toolkit for SE for Sustainability</td>
+						<td>2015</td>
+						<td>In this paper, the authors present a toolkit that helps to translate domain-dependent, high-level sustainability goals into software-specific constraints - i.e. it helps design sustainability into the software system. This is achieved by an extensive knowledge base that allows making recommendations to the software developer, and by best practices from open sources software development and user experience best practices.</td>
+					</tr>
+					<tr>
+						<td>A86</td>
+						<td>Moraga2015</td>
+						<td>19</td>
+						<td>Metric</td>
+						<td>Green Software Measurement</td>
+						<td>2015</td>
+						<td>In this paper, the authors have focused on carrying out a study of the existing Green measures which we have classified in accordance with the product greenability quality model.</td>
+					</tr>
+					<tr>
+						<td>A87</td>
+						<td>Cordero2015</td>
+						<td>[19][24]</td>
+						<td>Tool</td>
+						<td>A first approach on legacy system energy consumption measurement</td>
+						<td>2015</td>
+						<td>In this paper, authors propose a software tool intended to estimate the measurement of software energy consumption in terms of energy.</td>
+					</tr>
+					<tr>
+						<td>A88</td>
+						<td>Gottschalk2016</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Winter, Refactorings for energy-efficiency</td>
+						<td>2016</td>
+						<td>This paper shows an approach to save energy on application level on mobile devices. This approach includes the definition, detection, and restructuring of energy-inefficient code parts within apps. Energy savings are validated by different software-based energy measurement techniques.</td>
+					</tr>
+					<tr>
+						<td>A89</td>
+						<td>Chinenyeze2016</td>
+						<td>19</td>
+						<td>Tool</td>
+						<td>DEEPC: dynamic energy profiling of component</td>
+						<td>2016</td>
+						<td>In this paper,  the authors present an approach and tool for dynamic energy profiling of components for software systems (DEEPC). The proposed approach employs AOP concepts to expedite the energy measurement of components and improve accuracy, by, i) dynamically loading related components for evaluation (load-time weaving) into the base system, as a way to circumvent manual counter implementation, ii) using pointcuts to facilitate power measurement of loaded components.</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>Procaccianti2016</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Empirical evaluation of two best practices for energy-efficient software development</td>
+						<td>2016</td>
+						<td>This study aims at assessing the impact, in terms of energy savings, of best practices for achieving software energy efficiency, elicited from previous work. By doing so, it identifies which resources are affected by the practices and the possible trade-offs with energy consumption.</td>
+					</tr>
+					<tr>
+						<td>A91</td>
+						<td>Saputri2016</td>
+						<td>19</td>
+						<td>Technique</td>
+						<td>Incorporating sustainability design in requirements engineering process: a preliminary study</td>
+						<td>2016</td>
+						<td>In this paper, the authors propose a framework to analyze the sustainability dimension and structure it into software requirements. Moreover, the research goal of this paper is to develop a methodology that determine sustainability requirements. The proposed meta model integrates four sustainability dimensions with the other quality attributes such as performance and usability.</td>
+					</tr>
+					<tr>
+						<td>A92</td>
+						<td>Allen1999, Allen2007</td>
+						<td>21</td>
+						<td>Metric</td>
+						<td>Measuring coupling and cohesion: An information-theory approach</td>
+						<td>1999</td>
+						<td>Propose an information theory based approach to define coupling and cohesion metrics. Opposed to the former count-based measures, their definitions are based on the entropy in a module interconnection graph, which accounts for patterns in the relationships. They found that the information-theory based metrics were able to make finer distinctions than the count-based metrics. Propose an informationtheory based approach to define coupling and cohesion metrics.</td>
+					</tr>
+					<tr>
+						<td>A93</td>
+						<td>Field2014</td>
+						<td>24</td>
+						<td>Framework</td>
+						<td>EACOF: A framework for providing Energy transparency to enable Energy-aware Software development</td>
+						<td>2014</td>
+						<td>The authors proposed EACOF, a framework which allows access to information about the energy consumption of software through the use of simple API calls</td>
+					</tr>
+					<tr>
+						<td>A94</td>
+						<td>Johann2012</td>
+						<td>24</td>
+						<td>Metric</td>
+						<td>How to measure Energy-Efficiency of software: Metrics and Measurement results</td>
+						<td>2012</td>
+						<td>In this work the authors propose a generic metric to measure software and a method to apply it in a software engineering process.</td>
+					</tr>
+					<tr>
+						<td>A95</td>
+						<td>Sahin2012b</td>
+						<td>24</td>
+						<td>Tool</td>
+						<td>Towards Power Reduction Through Improve software Design</td>
+						<td>2012</td>
+						<td>In this paper, the authors present a new approach and tool for mapping software design to power consumption and describe how such mappings can provide software designers and developers useful information about the power behavior of the software they are developing. The goal is for software engineers to use this information in designing and developing more energy efficient solutions.</td>
+					</tr>
+					<tr>
+						<td>A96</td>
+						<td>Noureddine2012</td>
+						<td>24</td>
+						<td>Tool</td>
+						<td>Runtime Monitoring of Software Energy Hotspots</td>
+						<td>2012</td>
+						<td>In this paper, we therefore propose to gather fine-grained applications' power feedback information at runtime and with similar accuracy as hardware monitoring while using only a software approach. Our approach, called E-SURGEON, consists of a system monitoring library (at the operating system level), called POWERAPI, and a software monitoring agent, called Jalen.</td>
+					</tr>
+					<tr>
+						<td>A97</td>
+						<td>Ferreira2013</td>
+						<td>24</td>
+						<td>Metric</td>
+						<td>SEFLab: A lab for measuring software Energy Footprints</td>
+						<td>2013</td>
+						<td>In this paper, the authors provide an outlook of how energy footprint measurements can contribute to a body of knowledge on software-level energy optimization.</td>
+					</tr>
+					<tr>
+						<td>A98</td>
+						<td>Lami2012a</td>
+						<td>24</td>
+						<td>Metric</td>
+						<td>Measuring Software Sustainability from a Process Centric Perspective</td>
+						<td>2012</td>
+						<td>In this paper, the authors aims to address the need of establishing sustainability objectives and measuring them by few, common-sense measures using a goal-oriented approach, moving from a pre-analysis on the ‘Environment’ goals proposes in. The aim is to add a further piece of information in the design of the proposed new sustainability SPICE processes.</td>
+					</tr>
+				</tbody>
+			</table>
+			<a href="index.html" class="btn btn-warning">Return to index</a>
+			<br><br>
+		</body>
+		<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-primary" data-target="#primary" data-toggle="collapse" type="button">
+			Show secondary studies references
+		</button>
+
+		<div class="collapse" id="primary">
+			<div class="card card-body">
+
+				<pre>
+
+					%% A1
+					@InProceedings{Briand1993,
+					author    = {L.C. Briand and S. Morasca and V.R. Basili},
+					booktitle = {Conference on Software Maintenance},
+					title     = {Measuring and assessing maintainability at the end of high level design},
+					year      = {1993},
+					address   = {Montreal, Canada},
+					publisher = {{IEEE}},
+				}
+
+				%A2
+				@Article{Briand1996,
+				author    = {L.C. Briand and S. Morasca and V.R. Basili},
+				journal   = {{IEEE} Transactions on Software Engineering},
+				title     = {Property-based software engineering measurement},
+				year      = {1996},
+				number    = {1},
+				pages     = {68--86},
+				volume    = {22},
+				publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+			}
+
+			%A3
+			@Book{Lakos1996,
+			author    = {Lakos, John},
+			publisher = {Pearson Education (US)},
+			title     = {Large-Scale C++ Software Design},
+			year      = {1996},
+			edition   = {1},
+			isbn      = {0201633620},
+		}
+
+		%A4, A5
+		@Article{Burmeister1997,
+		author    = {B. Burmeister and A. Haddadi and G. Matylis},
+		journal   = {{IEE} Proceedings - Software Engineering},
+		title     = {Application of multi-agent systems in traffic and transportation},
+		year      = {1997},
+		number    = {1},
+		pages     = {51},
+		volume    = {144},
+		publisher = {Institution of Engineering and Technology ({IET})},
+	}
+
+	% A6
+	@InProceedings{Mancoridis1999,
+	author    = {S. Mancoridis and B.S. Mitchell and Y. Chen and E.R. Gansner},
+	booktitle = {International Conference on Software Maintenance - Software Maintenance for Business Change},
+	title     = {Bunch: a clustering tool for the recovery and maintenance of software system structures},
+	year      = {1999},
+	address   = {Oxford, United Kingdom},
+	publisher = {{IEEE}},
+	series    = {ICSM'99},
+}
+
+% A8
+@book{Martin2002,
+title={Agile software development: principles, patterns, and practices},
+author={Martin, Robert C},
+year={2002},
+publisher={Prentice Hall}
+}
+
+% A9
+@book{Clements2003,
+title={Evaluating software architectures},
+author={Clements, Paul and Kazman, Rick and Klein, Mark and others},
+year={2003},
+publisher={Tsinghua University Press Beijing}
+}
+
+% A10
+@Article{Bengtsson2004,
+author    = {PerOlof Bengtsson and Nico Lassing and Jan Bosch and Hans van Vliet},
+journal   = {Journal of Systems and Software},
+title     = {Architecture-level modifiability analysis ({ALMA})},
+year      = {2004},
+month     = jan,
+number    = {1-2},
+pages     = {129--147},
+volume    = {69},
+publisher = {Elsevier {BV}},
+}
+
+% A6
+@Article{Mitchell2006,
+author    = {B.S. Mitchell and S. Mancoridis},
+journal   = {{IEEE} Transactions on Software Engineering},
+title     = {On the automatic modularization of software systems using the Bunch tool},
+year      = {2006},
+month     = mar,
+number    = {3},
+pages     = {193--208},
+volume    = {32},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Sarkar2007,
+author    = {Santonu Sarkar and Girish Rama and Avinash Kak},
+journal   = {{IEEE} Transactions on Software Engineering},
+title     = {{API}-Based and Information-Theoretic Metrics for Measuring the Quality of Software Modularization},
+year      = {2007},
+month     = jan,
+number    = {1},
+pages     = {14--32},
+volume    = {33},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A16
+@InCollection{SantAnna2007,
+author    = {Cl{\'{a}}udio Sant'Anna and Eduardo Figueiredo and Alessandro Garcia and Carlos J. P. Lucena},
+booktitle = {Software Architecture},
+publisher = {Springer Berlin Heidelberg},
+title     = {On the Modularity of Software Architectures: A Concern-Driven Measurement Framework},
+year      = {2007},
+pages     = {207--224},
+}
+
+% A12
+@article{sarkar2007,
+title={API-based and information-theoretic metrics for measuring the quality of software modularization},
+author={Sarkar, Santonu and Rama, Girish Maskeri and Kak, Avinash C},
+journal={IEEE Transactions on Software Engineering},
+volume={33},
+number={1},
+pages={14--32},
+year={2006},
+publisher={IEEE}
+}
+
+% A18
+@Article{Sarkar2008,
+author    = {S. Sarkar and A.C. Kak and G.M. Rama},
+journal   = {{IEEE} Transactions on Software Engineering},
+title     = {Metrics for Measuring the Quality of Modularization of Large-Scale Object-Oriented Software},
+year      = {2008},
+month     = sep,
+number    = {5},
+pages     = {700--720},
+volume    = {34},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A19
+@Article{Sangwan2008,
+author    = {R.S. Sangwan and P. Vercellone-Smith and P.A. Laplante},
+journal   = {{IEEE} Software},
+title     = {Structural Epochs in the Complexity of Software over Time},
+year      = {2008},
+month     = jul,
+number    = {4},
+pages     = {66--73},
+volume    = {25},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A24
+@Article{Anan2009,
+author    = {Muhammad Anan and Hossein Saiedian and Jungwoo Ryoo},
+journal   = {Journal of Software Maintenance and Evolution: Research and Practice},
+title     = {An architecture-centric software maintainability assessment using information theory},
+year      = {2009},
+month     = jan,
+number    = {1},
+pages     = {1--18},
+volume    = {21},
+publisher = {Wiley},
+}
+
+% A25
+@InProceedings{Sethi2009,
+author    = {Kanwarpreet Sethi and Yuanfang Cai and Sunny Wong and Alessandro Garcia and Claudio Sant{\textquotesingle}Anna},
+booktitle = {2009 Joint Working {IEEE}/{IFIP} Conference on Software Architecture {\&} European Conference on Software Architecture},
+title     = {From retrospect to prospect: Assessing modularity and stability from software architecture},
+year      = {2009},
+address   = {Cambridge, United Kingdom},
+month     = sep,
+publisher = {IEEE},
+}
+
+% A92 
+@InProceedings{Allen1999,
+author    = {E.B. Allen and T.M. Khoshgoftaar},
+booktitle = {6$^{th}$ International Software Metrics Symposium},
+title     = {Measuring coupling and cohesion: an information-theory approach},
+year      = {1999},
+address   = {London, United Kingdom},
+publisher = {IEEE},
+}
+
+% A92
+@Article{Allen2007,
+author    = {Edward B. Allen and Sampath Gottipati and Rajiv Govindarajan},
+journal   = {Software Quality Journal},
+title     = {Measuring size, complexity, and coupling of hypergraph abstractions of software: An information-theory approach},
+year      = {2007},
+month     = feb,
+number    = {2},
+pages     = {179--212},
+volume    = {15},
+publisher = {Springer Science and Business Media {LLC}},
+}
+
+@InProceedings{Penzenstadler2013,
+author    = {Birgit Penzenstadler},
+booktitle = {28$^{th}$ Annual {ACM} Symposium on Applied Computing},
+title     = {Towards a definition of sustainability in and for software engineering},
+year      = {2013},
+address   = {Coimbra, Portugal},
+publisher = {ACM},
+series    = {SAC'13},
+}
+
+% A13
+@InProceedings{Penzenstadler2012,
+author    = {B. Penzenstadler and V. Bauer and C. Calero and X. Franch},
+booktitle = {16$^{th}$ International Conference on Evaluation {\&} Assessment in Software Engineering},
+title     = {Sustainability in software engineering: a systematic literature review},
+year      = {2012},
+address   = {Ciudad Real, Spain},
+publisher = {{IET}},
+series    = {EASE'12},
+}
+
+% A26 % A26
+@article{Appasami2011,
+title={Optimization of operating systems towards green computing},
+author={Appasami, G and Joseph, K Suresh},
+journal={International Journal of Combinatorial Optimization Problems and Informatics},
+volume={2},
+number={3},
+pages={39--51},
+year={2011},
+publisher={International Journal of Combinatorial Optimization Problems and Informatics}
+}
+
+@InProceedings{Lo2010,
+author    = {Chia-Tien Dan Lo and Kai Qian},
+booktitle = {34$^{th}$ Annual Computer Software and Applications Conference},
+title     = {Green Computing Methodology for Next Generation Computing Scientists},
+year      = {2010},
+address   = {San Juan, USA},
+month     = jul,
+publisher = {{IEEE}},
+series    = {ACSAC'18},
+}
+
+% A27
+@InProceedings{AlvaresdeOliveira2010,
+author    = {Frederico G. Alvares de Oliveira and Thomas Ledoux},
+booktitle = {1$^{th}$ Workshop on Green Computing},
+title     = {Self-optimisation of the energy footprint in service-oriented architectures},
+year      = {2010},
+address   = {Bangalore India},
+publisher = {ACM},
+series    = {GCM'10},
+}
+
+% A28
+@InProceedings{Corbett2010,
+author    = {Jacqueline Corbett},
+booktitle = {International Conference on Information Systems},
+title     = {Unearthing the value of green IT},
+year      = {2010},
+address   = {Saint Louis, Missouri, USA},
+publisher = {AISEL},
+series    = {ICIS'10},
+}
+
+% A32
+@article{Naumann2011,
+year = {2011},
+month = dec,
+publisher = {Elsevier {BV}},
+volume = {1},
+number = {4},
+pages = {294--304},
+author = {Stefan Naumann and Markus Dick and Eva Kern and Timo Johann},
+title = {The {GREENSOFT} Model: A reference model for green and sustainable software and its engineering},
+journal = {Sustainable Computing: Informatics and Systems}
+}
+
+
+% A33
+@article{Gupta2011,
+title={A framework of creating intelligent power profiles in operating systems to minimize power consumption and greenhouse effect caused by computer systems},
+author={Gupta P.K. Singh G.},
+journal={Journal of green engineering},
+volume={1},
+number={2},
+pages={145--163},
+year={2014},
+publisher={River publishers}
+}
+
+% A34
+@article{Taina2011,
+title = "Good, Bad, and Beautiful Software - In Search of Green Software Quality Factors",
+keywords = "113 Computer and information sciences, Green Software, Green metrics, Software Engineering for the planet",
+author = "Juha Taina",
+year = "2011",
+month = oct,
+language = "English",
+volume = "2011",
+pages = "22--27",
+journal = "CEPIS UPGRADE",
+issn = "1684-5285",
+publisher = "CEPIS",
+number = "4",
+}
+
+% A45
+@InProceedings{Mahaux2012,
+author    = {Mahaux, Martin and Canon, Caroline},
+booktitle = {1$^{st}$ international workshop on Requirements for Sustainable Systems},
+title     = {Integrating the complexity of sustainability in requirements engineering},
+year      = {2012},
+}
+
+% A47
+@InProceedings{Penzenstadler2012c,
+author       = {Penzenstadler, Birgit and Tomlinson, Bill and Richardson, Debra},
+booktitle    = {International Workshop on Requirements Engineering for Sustainable Systems},
+title        = {Re4es: Support environmental sustainability by requirements engineering},
+year         = {2012},
+address      = {Essen, Germany},
+organization = {Citeseer},
+publisher    = {CiteSeerX},
+series       = {Re4SuSy'12},
+}
+
+% A82
+@InCollection{Raturi2015,
+author    = {Ankita Raturi and Bill Tomlinson and Debra Richardson},
+booktitle = {Green in Software Engineering},
+publisher = {Springer International Publishing},
+title     = {Green Software Engineering Environments},
+year      = {2015},
+pages     = {31--59},
+}
+
+% A68
+@InProceedings{Lami2014,
+author    = {Giuseppe Lami and Fabrizio Fabbrini and Luigi Buglione},
+booktitle = {Joint Conference of the International Workshop on Software Measurement and the International Conference on Software Process and Product Measurement},
+title     = {An {ISO}/{IEC} 33000-Compliant Measurement Framework for Software Process Sustainability Assessment},
+year      = {2014},
+address   = {Haarlem, Netherlands},
+month     = oct,
+publisher = {{IEEE}},
+}
+
+% A82
+@misc{Iso33001:2015,
+title="ISO/IEC 33001:2015 Information technology — Process assessment — Concepts and terminology",
+year="2020",
+}
+
+% A49
+@InProceedings{Chen2012,
+author    = {FeiFei Chen and Jean-Guy Schneider and Yun Yang and John Grundy and Qiang He},
+booktitle = {1$^{st}$ International Workshop on Green and Sustainable Software},
+title     = {An energy consumption model and analysis tool for Cloud computing environments},
+year      = {2012},
+address   = {Zurich, Switzerland},
+month     = jun,
+publisher = {{IEEE}},
+series    = {GREENS'12},
+}
+
+% A50 A52
+@article{Curry2012,
+title={Sustainable information systems and green metrics},
+author={Curry, Edward and Donnellan, Brian},
+journal={Harnessing Green IT: Principles and Practices},
+pages={167--198},
+year={2012},
+publisher={Wiley Online Library}
+}
+
+% A51
+@InCollection{Murugesan2012,
+author    = {San Murugesan and G. R. Gangadharan},
+booktitle = {Harnessing Green It},
+publisher = {John Wiley {\&} Sons, Ltd},
+title     = {Green {IT}: An Overview},
+year      = {2012},
+month     = sep,
+pages     = {1--21},
+}
+
+% A59
+@InProceedings{Dick2013,
+author    = {Markus Dick and Jakob Drangmeister and Eva Kern and Stefan Naumann},
+booktitle = {2$^{nd}$ International Workshop on Green and Sustainable Software ({GREENS})},
+title     = {Green software engineering with agile methods},
+year      = {2013},
+address   = {San Francisco California},
+month     = may,
+publisher = {{IEEE}},
+series    = {GREENS'13},
+}
+
+% A60
+@InProceedings{Doerflinger2013,
+author    = {Joerg Doerflinger and Andy Dearden and Tom Gross},
+booktitle = {Extended Abstracts on Human Factors in Computing Systems},
+title     = {A software development methodology for sustainable {ICTD} solutions},
+year      = {2013},
+address   = {Paris, France},
+publisher = {ACM},
+series    = {CHI'13},
+}
+
+% A58
+@article{Mahmoud2013,
+title={A green model for sustainable software engineering},
+author={Mahmoud, Sara S and Ahmad, Imtiaz},
+journal={International Journal of Software Engineering and Its Applications},
+volume={7},
+number={4},
+pages={55--74},
+year={2013},
+publisher={Citeseer}
+}
+
+% A69
+@Article{Ardito2014,
+author    = {Luca Ardito and Maurizio Morisio},
+journal   = {Sustainable Computing: Informatics and Systems},
+title     = {Green {IT} {\textendash} Available data and guidelines for reducing energy consumption in {IT} systems},
+year      = {2014},
+month     = mar,
+number    = {1},
+pages     = {24--32},
+volume    = {4},
+publisher = {Elsevier {BV}},
+}
+
+% A70
+@InProceedings{Amri2014,
+author    = {Rahma Amri and Narjes Bellamine Ben Saoud},
+booktitle = {4$^{th}$ International Conference on Advances in Computing and Communications},
+title     = {Towards a Generic Sustainable Software Model},
+year      = {2014},
+address   = {Cochin, India},
+month     = aug,
+publisher = {{IEEE}},
+}
+
+% A17
+@Article{Pennington2008,
+author    = {Deana D. Pennington and Ioannis N. Athanasiadis and Shawn Bowers and Serguei Krivov and Joshua Madin and Mark Schildhauer and Ferdinando Villa},
+journal   = {International Journal of Metadata, Semantics and Ontologies},
+title     = {Indirectly driven knowledge modelling in ecology},
+year      = {2008},
+number    = {3},
+pages     = {210},
+volume    = {3},
+publisher = {Inderscience Publishers},
+}
+
+% A20
+@InCollection{Du2010,
+author    = {Le Du},
+booktitle = {Computer and Computing Technologies in Agriculture {III}},
+publisher = {Springer Berlin Heidelberg},
+title     = {Expert Control Based on Neural Networks for Controlling Greenhouse Environment},
+year      = {2010},
+pages     = {126--132},
+}
+
+% A21
+@InProceedings{Ramona2009,
+author       = {Ramona, Ciobanu},
+booktitle    = {8$^{th}$ WSEAS international conference on System science and simulation in engineering},
+title        = {Creating and consolidating eco-economics through financial and fiscal instruments. contribution of green taxes},
+year         = {2009},
+address      = {Wisconsin, United States},
+organization = {World Scientific and Engineering Academy and Society (WSEAS)},
+pages        = {148--152},
+publisher    = {World Scientific and Engineering Academy and Society},
+}
+
+% A35
+@Article{Bravi2011,
+author    = {Mirko Bravi and Maria Laura Parisi and Enzo Tiezzi and Riccardo Basosi},
+journal   = {Energy},
+title     = {Life cycle assessment of a micromorph photovoltaic system},
+year      = {2011},
+month     = jul,
+number    = {7},
+pages     = {4297--4306},
+volume    = {36},
+publisher = {Elsevier {BV}},
+}
+
+% A7
+@article{Dong2012,
+title={Research on the development of green product life cycle analysis tool},
+author={Dong, DG Xiang and Jinsong, Wang},
+journal={China Mechanical Engineering},
+volume={13},
+pages={1760--4},
+year={2002}
+}
+
+% A14
+@InProceedings{Ramakrishnan2007,
+author    = {Sita Ramakrishnan and Subramania Ramakrishnan},
+booktitle = {29$^{th}$ International Conference on Information Technology Interfaces},
+title     = {Business Process Ontology and Software Service Models for Environmentally Sustainable Manufacturing Enterprises},
+year      = {2007},
+address   = {Cavtat, Croatia},
+month     = jun,
+publisher = {{IEEE}},
+}
+
+% A15
+@Article{Robinson2007,
+author    = {D. Robinson and N. Campbell and W. Gaiser and K. Kabel and A. Le-Mouel and N. Morel and J. Page and S. Stankovic and A. Stone},
+journal   = {Solar Energy},
+title     = {{SUNtool} {\textendash} A new modelling paradigm for simulating and optimising urban sustainability},
+year      = {2007},
+month     = sep,
+number    = {9},
+pages     = {1196--1211},
+volume    = {81},
+publisher = {Elsevier {BV}},
+}
+
+% A22
+@InProceedings{Cabot2009,
+author    = {Jordi Cabot and Steve Easterbrook and Jennifer Horkoff and Lysanne Lessard and Sotirios Liaskos and Jose-Norberto Mazon},
+booktitle = {31$^{th}$ International Conference on Software Engineering},
+title     = {Integrating sustainability in decision-making processes: A modelling strategy},
+year      = {2009},
+address   = {Vancouver, Canada},
+publisher = {{IEEE}},
+}
+
+% A23
+@InProceedings{Johansson2009,
+author    = {Bj\"{o}rn Johansson and Anders Skoogh and Mahesh Mani and Swee Leong},
+booktitle = {9$^{th}$ Workshop on Performance Metrics for Intelligent Systems},
+title     = {Discrete event simulation to generate requirements specification for sustainable manufacturing systems design},
+year      = {2009},
+address   = {Gaithersburg, Maryland, USA},
+publisher = {ACM},
+series    = {PerMIS'09},
+}
+
+% A29
+@article{Sissa2010,
+title={Green software},
+author={Sissa, Giovanna},
+year={2010},
+journal ={The european journal for the informatics professional},
+volume={11},
+number= {3},
+}
+
+% A30
+@InProceedings{Bingshan2010,
+author    = {W. {Bingshan} and Z. {Weiguo} and L. {Jun}},
+booktitle = {2$^{nd}$ International Conference on Software Engineering and Data Mining},
+title     = {Knowledge-based environmental information system for sustainable development of wetland area},
+year      = {2010},
+address   = {Chengdu, China},
+pages     = {178-182},
+publisher = {IEEE},
+}
+
+% A31
+@InProceedings{Ager2010,
+author    = {Alan Ager and Charlie Schrader-Patton and Ken Bunzel and Brett Colombe},
+booktitle = {10$^{th}$ International Conference and Exhibition on Computing for Geospatial Research {\&} Application},
+title     = {Internet map services: new portal for global ecological monitoring, or geodata junkyard?},
+year      = {2010},
+address   = {Washington, D.C. USA},
+publisher = {ACM},
+series    = {COM.Geo'10},
+}
+
+% A36
+@InCollection{Mahaux2011,
+author    = {Martin Mahaux and Patrick Heymans and Germain Saval},
+booktitle = {Requirements Engineering: Foundation for Software Quality},
+publisher = {Springer Berlin Heidelberg},
+title     = {Discovering Sustainability Requirements: An Experience Report},
+year      = {2011},
+pages     = {19--33},
+}
+
+% A37
+@InCollection{Maharmeh2011,
+author    = {Mohammed Maharmeh and Zahra Saeed},
+booktitle = {Handbook of Research on Green {ICT}},
+publisher = {{IGI} Global},
+title     = {Application of a Composite Process Framework for Managing Green {ICT} Applications Development},
+year      = {2011},
+pages     = {535--545},
+}
+
+% A38
+@InProceedings{Shenoy2011,
+author    = {Sanath. S. Shenoy and Raghavendra Eeratta},
+booktitle = {2011 Annual {IEEE} India Conference},
+title     = {Green software development model: An approach towards sustainable software development},
+year      = {2011},
+address   = {Hyderabad, India},
+month     = dec,
+publisher = {{IEEE}},
+}
+
+% A40
+@InCollection{Bhalla2011,
+author    = {Ishan Bhalla and Kamlesh Chaudhary},
+booktitle = {Handbook of Research on Green {ICT}},
+publisher = {{IGI} Global},
+title     = {Applying Service Oriented Architecture and Cloud Computing for a Greener Traffic Management},
+year      = {2011},
+pages     = {332--347},
+}
+
+% A41
+@InCollection{Schrammel2011,
+author    = {Johann Schrammel and Cornelia Gerdenitsch and Astrid Weiss and Patricia M. Kluckner and Manfred Tscheligi},
+booktitle = {Lecture Notes in Computer Science},
+publisher = {Springer Berlin Heidelberg},
+title     = {{FORE}-Watch {\textendash} The Clock That Tells You When to Use: Persuading Users to Align Their Energy Consumption with Green Power Availability},
+year      = {2011},
+pages     = {157--166},
+}
+
+% A53
+@InProceedings{Sahin2012a,
+author    = {Cagri Sahin and Furkan Cayci and Irene Lizeth Manotas Gutierrez and James Clause and Fouad Kiamilev and Lori Pollock and Kristina Winbladh},
+booktitle = {1$^{st}$ International Workshop on Green and Sustainable Software ({GREENS})},
+title     = {Initial explorations on design pattern energy usage},
+year      = {2012},
+address   = {Zurich, Switzerland},
+month     = jun,
+publisher = {{IEEE}},
+series    = {GREENS'12},
+}
+
+% A13 A61
+@InProceedings{Penzenstadler2013a,
+author    = {Birgit Penzenstadler and Henning Femmer},
+booktitle = {workshop on Green in/by software engineering},
+title     = {A generic model for sustainability with process- and product-specific instances},
+year      = {2013},
+address   = {Fukuoka Japan},
+publisher = {ACM},
+series    = {GIBSE'13},
+}
+
+% A62
+@InProceedings{Penzenstadler2013b,
+author    = {Birgit Penzenstadler and Henning Femmer and Debra Richardson},
+booktitle = {2$^{nd}$ International Workshop on Green and Sustainable Software ({GREENS})},
+title     = {Who is the advocate? Stakeholders for sustainability},
+year      = {2013},
+address   = {San Francisco California},
+month     = may,
+publisher = {{IEEE}},
+series    = {GREENS'13},
+}
+
+% A63
+@article{Grosskop2013,
+title={Identification of application-level energy optimizations},
+author={Grosskop, Kay and Visser, Joost},
+booktitle={Proceedings of the First International Conference on Information
+and Communication Technologies for Sustainability},
+year={2013}
+}
+
+% A42
+@InProceedings{Koziolek2011,
+author    = {Heiko Koziolek},
+booktitle = {Joint {ACM} {SIGSOFT} conference -- {QoSA} and {ACM} {SIGSOFT} symposium -- {ISARCS} on Quality of software architectures -- {QoSA} and architecting critical systems -- {ISARCS}},
+title     = {Sustainability evaluation of software architectures},
+year      = {2011},
+address   = {Boulder, USA},
+publisher = {ACM},
+series    = {QoSA-ISARCS'11},
+}
+
+% A54
+@InProceedings{Durdik2012,
+author    = {Zoya Durdik and Benjamin Klatt and Heiko Koziolek and Klaus Krogmann and Johannes Stammel and Roland Weiss},
+booktitle = {28$^{th}$ {IEEE} International Conference on Software Maintenance},
+title     = {Sustainability guidelines for long-living software systems},
+year      = {2012},
+address   = {Trento, Italy},
+month     = sep,
+publisher = {{IEEE}},
+series    = {ICSM'12},
+}
+
+
+% A64
+@Article{Venters2014,
+author    = {Colin C. Venters and Lydia Lau and Michael K. Griffiths and Violeta Holmes and Rupert R. Ward and Caroline Jay and Charlie E. Dibsdale and Jie Xu},
+journal   = {Journal of Open Research Software},
+title     = {The Blind Men and the Elephant: Towards an Empirical Evaluation Framework for Software Sustainability},
+year      = {2014},
+month     = jul,
+number    = {1},
+volume    = {2},
+publisher = {Ubiquity Press, Ltd.},
+}
+
+% A65
+@Article{Koziolek2013,
+author    = {Heiko Koziolek and Dominik Domis and Thomas Goldschmidt and Philipp Vorst},
+journal   = {{IEEE} Software},
+title     = {Measuring Architecture Sustainability},
+year      = {2013},
+month     = nov,
+number    = {6},
+pages     = {54--62},
+volume    = {30},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A66
+@InProceedings{kocak2013,
+author    = {Kocak, Sedef AKINLI},
+booktitle = {11$^{th}$ International Doctoral Symposium an Empirical Software Engineering},
+title     = {Green software development and design for environmental sustainability},
+year      = {2013},
+address   = {Baltimore, Maryland},
+publisher = {IEEE},
+series    = {IDOESE'13},
+volume    = {9},
+}
+
+
+% A67
+@TechReport{Bozzelli2013,
+title={A systematic literature review on green software metrics},
+author={Bozzelli, Paolo and Gu, Qing and Lago, Patricia},
+institution={VU University, Amsterdam},
+year={2013}
+}
+
+% A11
+@Article{Vallerio2006,
+author    = {K.S. Vallerio and Lin Zhong and N.K. Jha},
+journal   = {{IEEE} Transactions on Mobile Computing},
+title     = {Energy-efficient graphical user interface design},
+year      = {2006},
+month     = jul,
+number    = {7},
+pages     = {846--859},
+volume    = {5},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A43
+@InCollection{Marcus2011,
+author    = {Aaron Marcus and Jennifer Dumpert and Laurie Wigham},
+booktitle = {Lecture Notes in Computer Science},
+publisher = {Springer Berlin Heidelberg},
+title     = {User-Experience for Personal Sustainability Software: Determining Design Philosophy and Principles},
+year      = {2011},
+pages     = {172--177},
+}
+
+% A44
+@Article{Rahman2011,
+author    = {Farzana Rahman and Casey O'Brien and Sheikh I. Ahamed and He Zhang and Lin Liu},
+journal   = {Sustainable Computing: Informatics and Systems},
+title     = {Design and implementation of an open framework for ubiquitous carbon footprint calculator applications},
+year      = {2011},
+month     = dec,
+number    = {4},
+pages     = {257--274},
+volume    = {1},
+publisher = {Elsevier {BV}},
+}
+
+% A50
+@InProceedings{Jelschen2012,
+author    = {Jan Jelschen and Marion Gottschalk and Mirco Josefiok and Cosmin Pitu and Andreas Winter},
+booktitle = {16$^{th}$ European Conference on Software Maintenance and Reengineering},
+title     = {Towards Applying Reengineering Services to Energy-Efficient Applications},
+year      = {2012},
+address   = {Szeged, Hungary},
+month     = mar,
+publisher = {{IEEE}},
+series    = {CSMR'12},
+}
+
+% A56
+@Article{Agosta2012,
+author    = {Giovanni Agosta and Marco Bessi and Eugenio Capra and Chiara Francalanci},
+journal   = {Sustainable Computing: Informatics and Systems},
+title     = {Automatic memoization for energy efficiency in financial applications},
+year      = {2012},
+month     = jun,
+number    = {2},
+pages     = {105--115},
+volume    = {2},
+publisher = {Elsevier {BV}},
+}
+
+% A57
+@Article{Sabharwal2013,
+author    = {Manuj Sabharwal and Abhishek Agrawal and Grace Metri},
+journal   = {{IT} Professional},
+title     = {Enabling Green {IT} through Energy-Aware Software},
+year      = {2013},
+month     = jan,
+number    = {1},
+pages     = {19--27},
+volume    = {15},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A46
+@Article{Capra2012,
+author    = {Eugenio Capra and Chiara Francalanci and Sandra A. Slaughter},
+journal   = {Information and Software Technology},
+title     = {Is software {\textquotedblleft}green{\textquotedblright}? Application development environments and energy efficiency in open source applications},
+year      = {2012},
+month     = jan,
+number    = {1},
+pages     = {60--71},
+volume    = {54},
+publisher = {Elsevier {BV}},
+}
+
+% A71
+@InProceedings{Sahin2014,
+author    = {Cagri Sahin and Lori Pollock and James Clause},
+booktitle = {8$^{th}$ {ACM}/{IEEE} International Symposium on Empirical Software Engineering and Measurement},
+title     = {How do code refactorings affect energy usage?},
+year      = {2014},
+address   = {Oulu, Finland},
+publisher = {ACM},
+series    = {ESEM'14},
+}
+
+%A72
+@InProceedings{Corral2014,
+author    = {Luis Corral and Anton B. Georgiev and Alberto Sillitti and Giancarlo Succi},
+booktitle = {29$^{th}$ Annual {ACM} Symposium on Applied Computing},
+title     = {Method reallocation to reduce energy consumption},
+year      = {2014},
+address   = {Gyeongju, Korea},
+publisher = {ACM},
+series    = {SAC'14},
+}
+
+% A73
+@InProceedings{Abdulsalam2014,
+author    = {Sarah Abdulsalam and Donna Lakomski and Qijun Gu and Tongdan Jin and Ziliang Zong},
+booktitle = {International Green Computing Conference},
+title     = {Program energy efficiency: The impact of language, compiler and implementation choices},
+year      = {2014},
+address   = {Dallas, TX, USA},
+month     = nov,
+publisher = {{IEEE}},
+}
+
+% A74
+@InProceedings{Li2014,
+author    = {Ding Li and William G. J. Halfond},
+booktitle = {3$^{rd}$ International Workshop on Green and Sustainable Software},
+title     = {An investigation into energy-saving programming practices for Android smartphone app development},
+year      = {2014},
+address   = {Hyderabad India},
+publisher = {ACM},
+series    = {GREENS'14},
+}
+
+% A75
+@Article{Yu2015,
+author    = {Jiadi Yu and Haofu Han and Hongzi Zhu and Yingying Chen and Jie Yang and Yanmin Zhu and Guangtao Xue and Minglu Li},
+journal   = {{IEEE} Transactions on Mobile Computing},
+title     = {Sensing Human-Screen Interaction for Energy-Efficient Frame Rate Adaptation on Smartphones},
+year      = {2015},
+month     = aug,
+number    = {8},
+pages     = {1698--1711},
+volume    = {14},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A76
+@InProceedings{Bomfim2014,
+author    = {Camilla Bomfim and Wesley Nunes and Leticia Duboc and Marcelo Schots},
+booktitle = {22$^{nd} $ International Requirements Engineering Conference},
+title     = {Modelling sustainability in a procurement system: An experience report},
+year      = {2014},
+address   = {Karlskrona, Sweden},
+month     = aug,
+publisher = {{IEEE}},
+series    = {RE'14},
+}
+
+% A77
+@InProceedings{Raturi2014,
+author    = {Ankita Raturi and Birgit Penzenstadler and Bill Tomlinson and Debra Richardson},
+booktitle = {3$^{rd}$ International Workshop on Green and Sustainable Software},
+title     = {Developing a sustainability non-functional requirements framework},
+year      = {2014},
+address   = {Hyderabad India},
+publisher = {ACM},
+series    = {GREENS'14},
+}
+
+% A76 A78
+@InCollection{Couto2014,
+author    = {Marco Couto and Tiago Car{\c{c}}{\~{a}}o and J{\'{a}}come Cunha and Jo{\~{a}}o Paulo Fernandes and Jo{\~{a}}o Saraiva},
+booktitle = {Programming Languages},
+publisher = {Springer International Publishing},
+title     = {Detecting Anomalous Energy Consumption in Android Applications},
+year      = {2014},
+pages     = {77--91},
+}
+
+% A79
+@InProceedings{Chang2014,
+author    = {Su-Wei Chang and Sheng-Wei Cheng and Pi-Cheng Hsiu and Tei-Wei Kuo and Ching-Wen Lin},
+booktitle = {29$^{th}$ Annual {ACM} Symposium on Applied Computing},
+title     = {Application behavior analysis in resource consumption for mobile devices},
+year      = {2014},
+address   = {Gyeongju, Korea},
+publisher = {ACM},
+series    = {SAC14},
+}
+
+% A80
+@InProceedings{Zhang2014,
+author    = {Chenlei Zhang and Abram Hindle},
+booktitle = {11$^{th}$ Working Conference on Mining Software Repositories},
+title     = {A green miner{\textquotesingle}s dataset: mining the impact of software change on energy consumption},
+year      = {2014},
+address   = {Hyderabad India},
+publisher = {ACM},
+series    = {MSR'14},
+}
+
+% A83
+@Article{Ardito2015,
+author    = {Luca Ardito and Giuseppe Procaccianti and Marco Torchiano and Antonio Vetro},
+journal   = {{IT} Professional},
+title     = {Understanding Green Software Development: A Conceptual Framework},
+year      = {2015},
+month     = jan,
+number    = {1},
+pages     = {44--50},
+volume    = {17},
+publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+% A84
+@InCollection{Penzenstadler2015d,
+author    = {Birgit Penzenstadler},
+booktitle = {Green in Software Engineering},
+publisher = {Springer International Publishing},
+title     = {From Requirements Engineering to Green Requirements Engineering},
+year      = {2015},
+pages     = {157--186},
+}
+
+% A85
+@InCollection{Penzenstadler2015e,
+author    = {Birgit Penzenstadler},
+booktitle = {Design, User Experience, and Usability: Design Discourse},
+publisher = {Springer International Publishing},
+title     = {A Toolkit for {SE} for Sustainability - A Design Fiction},
+year      = {2015},
+pages     = {634--643},
+}
+
+% A86
+@InCollection{Moraga2015,
+author    = {M{\textordfeminine} {\'{A}}ngeles Moraga and Manuel F. Bertoa},
+booktitle = {Green in Software Engineering},
+publisher = {Springer International Publishing},
+title     = {Green Software Measurement},
+year      = {2015},
+pages     = {261--282},
+}
+
+% A87
+@InProceedings{Cordero2015,
+author    = {Victor Cordero and Ignacio Garcia-Rodriguez de Guzman and Mario Piattini},
+booktitle = {10$^{th}$ International Conference on Global Software Engineering Workshops},
+title     = {A First Approach on Legacy System Energy Consumption Measurement},
+year      = {2015},
+address   = {Ciudad Real, Spain},
+month     = jul,
+publisher = {{IEEE}},
+}
+
+% A88
+@InCollection{Gottschalk2016,
+author    = {Marion Gottschalk and Jan Jelschen and Andreas Winter},
+booktitle = {Progress in {IS}},
+publisher = {Springer International Publishing},
+title     = {Refactorings for Energy-Efficiency},
+year      = {2016},
+pages     = {77--96},
+}
+
+% A89
+@InProceedings{Chinenyeze2016,
+author    = {Samuel J. Chinenyeze and Xiaodong Liu and Ahmed Al-Dubai},
+booktitle = {40$^{th}$ Annual Computer Software and Applications Conference},
+title     = {{DEEPC}: Dynamic Energy Profiling of Components},
+year      = {2016},
+address   = {Atlanta, USA},
+month     = jun,
+publisher = {{IEEE}},
+series    = {COMPSAC'16},
+}
+
+% A90
+@Article{Procaccianti2016,
+author    = {Giuseppe Procaccianti and H{\'{e}}ctor Fern{\'{a}}ndez and Patricia Lago},
+journal   = {Journal of Systems and Software},
+title     = {Empirical evaluation of two best practices for energy-efficient software development},
+year      = {2016},
+month     = jul,
+pages     = {185--198},
+volume    = {117},
+publisher = {Elsevier {BV}},
+}
+
+% A91
+@InCollection{Saputri2016,
+author    = {Theresia Ratih Dewi Saputri and Seok-Won Lee},
+booktitle = {Communications in Computer and Information Science},
+publisher = {Springer Singapore},
+title     = {Incorporating Sustainability Design in Requirements Engineering Process: A Preliminary Study},
+year      = {2016},
+pages     = {53--67},
+}
+
+% A93
+@InProceedings{Field2014,
+author    = {Hayden Field and Glen Anderson and Kerstin Eder},
+booktitle = {29$^{th}$ Annual {ACM} Symposium on Applied Computing},
+title     = {{EACOF}},
+year      = {2014},
+address   = {Gyeongju, Korea},
+publisher = {ACM},
+series    = {SAC'14},
+}
+
+% A94
+@InProceedings{Johann2012,
+author    = {Timo Johann and Markus Dick and Stefan Naumann and Eva Kern},
+booktitle = {1$^{st}$ International Workshop on Green and Sustainable Software},
+title     = {How to measure energy-efficiency of software: Metrics and measurement results},
+year      = {2012},
+address   = {Zurich, Switzerland},
+month     = jun,
+publisher = {{IEEE}},
+series    = {GREENS'12},
+}
+
+% A95
+@InProceedings{Sahin2012b,
+author    = {Cagri Sahin and Furkan Cayci and James Clause and Fouad Kiamilev and Lori Pollock and Kristina Winbladh},
+booktitle = {{IEEE} Energytech},
+title     = {Towards power reduction through improved software design},
+year      = {2012},
+address   = {Cleveland, USA},
+month     = may,
+publisher = {{IEEE}},
+}
+
+% A96
+@InProceedings{Noureddine2012,
+author    = {Adel Noureddine and Aurelien Bourdon and Romain Rouvoy and Lionel Seinturier},
+booktitle = {27$^{th}$ {IEEE}/{ACM} International Conference on Automated Software Engineering},
+title     = {Runtime monitoring of software energy hotspots},
+year      = {2012},
+address   = {Essen, Germany},
+publisher = {ACM},
+series    = {ASE'12},
+}
+
+% A97
+@InProceedings{Ferreira2013,
+author    = {Miguel A. Ferreira and Eric Hoekstra and Bo Merkus and Bram Visser and Joost Visser},
+booktitle = {2$^{nd}$ International Workshop on Green and Sustainable Software ({GREENS})},
+title     = {Seflab: A lab for measuring software energy footprints},
+year      = {2013},
+address   = {San Francisco California},
+month     = may,
+publisher = {{IEEE}},
+series    = {GREENS'13},
+}
+
+% A98
+@InProceedings{Lami2012a,
+author    = {Giuseppe Lami and Luigi Buglione},
+booktitle = {Joint Conference of the 22nd International Workshop on Software Measurement and the 2012 7$^{th}$ International Conference on Software Process and Product Measurement},
+title     = {Measuring Software Sustainability from a Process-centric Perspective},
+year      = {2012},
+address   = {Assisi, Italy},
+month     = oct,
+publisher = {{IEEE}},
+}
+
+% A39
+@inproceedings{Amsel2011,
+year = {2011},
+publisher = {{ACM} Press},
+author = {Nadine Amsel and Zaid Ibrahim and Amir Malik and Bill Tomlinson},
+title = {Toward sustainable software engineering},
+booktitle = {33${rd}$ international conference on Software engineering},
+series = {ICSE'14},
+address={Honolulu, USA},
+publisher = {IEEE},
+}
+
+% A48
+@incollection{Lami2012b,
+year = {2012},
+publisher = {Springer Berlin Heidelberg},
+pages = {97--108},
+author = {Giuseppe Lami and Fabrizio Fabbrini and Mario Fusani},
+title = {Software Sustainability from a Process-Centric Perspective},
+booktitle = {Communications in Computer and Information Science}
+}
+
+
+</pre>
+
+</div>
+</div>
+<br><br>
+<br><br>
+<br><br>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
